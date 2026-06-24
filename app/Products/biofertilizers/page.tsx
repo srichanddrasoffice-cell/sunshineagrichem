@@ -1,6 +1,4 @@
-import Hero from "@/components/Hero";
-import AboutUs from "@/components/AboutUs";
-import FloatingActions from "@/components/FloatingActions";
+
 import Products from "@/components/Products";
 import Number from "@/components/Number";
 import WhyChooseUs from "@/components/WhyChoose";
@@ -9,12 +7,11 @@ import WhyChooseUs from "@/components/WhyChoose";
 export default function Home() {
   return (
     <>
-      <Hero />      
-      <AboutUs />
+      
       <Products/>
       <Number/>   
       <WhyChooseUs/>
-      <FloatingActions/>
+    
     </>
   );
 }
