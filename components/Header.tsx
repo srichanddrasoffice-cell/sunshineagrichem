@@ -2,341 +2,240 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
+import { usePathname, useRouter } from "next/navigation";
+import { useMemo, useState } from "react";
 
-const services = [
-  { id: "service-1", name: "Organic Fertilizers", href: "/Services" },
-  { id: "service-2", name: "Crop Nutrition", href: "/Services" },
-  { id: "service-3", name: "Soil Solutions", href: "/Services" },
+const languages = [
+  { code: "en", label: "English" },
+  { code: "te", label: "తెలుగు" },
+  { code: "hi", label: "हिन्दी" },
+];
+
+const navigation = [
+  {
+    name: {
+      en: "Home",
+      te: "హోమ్",
+      hi: "होम",
+    },
+    href: "",
+  },
+  {
+    name: {
+      en: "Products",
+      te: "ఉత్పత్తులు",
+      hi: "उत्पाद",
+    },
+    href: "/Products",
+  },
+  {
+    name: {
+      en: "Blogs",
+      te: "బ్లాగ్స్",
+      hi: "ब्लॉग",
+    },
+    href: "/blogs",
+  },
+  {
+    name: {
+      en: "About",
+      te: "మా గురించి",
+      hi: "हमारे बारे में",
+    },
+    href: "/about",
+  },
+  {
+    name: {
+      en: "Contact",
+      te: "సంప్రదించండి",
+      hi: "संपर्क करें",
+    },
+    href: "/contact",
+  },
 ];
 
 export default function Header() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [serviceOpen, setServiceOpen] = useState(false);
-  const [productOpen, setProductOpen] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
 
-  const [showHeader, setShowHeader] = useState(true);
+  const [mobileMenu, setMobileMenu] = useState(false);
 
-  useEffect(() => {
-    let timeout: NodeJS.Timeout;
+  const currentLocale = useMemo(() => {
+    const locale = pathname.split("/")[1];
 
-    const handleActivity = () => {
-      setShowHeader(true);
-      clearTimeout(timeout);
-      if (window.scrollY > window.innerHeight * 0.8) {
-        timeout = setTimeout(() => {
-          setShowHeader(false);
-        }, 4000);
-      }
-    };
+    return ["en", "te", "hi"].includes(locale)
+      ? locale
+      : "en";
+  }, [pathname]);
 
-    handleActivity();
-    window.addEventListener("mousemove", handleActivity);
-    window.addEventListener("scroll", handleActivity);
-    window.addEventListener("touchstart", handleActivity);
+  function changeLanguage(locale: string) {
+    const segments = pathname.split("/");
 
-    return () => {
-      clearTimeout(timeout);
-      window.removeEventListener("mousemove", handleActivity);
-      window.removeEventListener("scroll", handleActivity);
-      window.removeEventListener("touchstart", handleActivity);
-    };
-  }, []);
+    segments[1] = locale;
+
+    router.push(segments.join("/"));
+  }
 
   return (
-    <header className={`
-      fixed top-0 left-0 w-full z-50
-      transition-all duration-500
-      ${showHeader
-        ? "translate-y-0 opacity-100"
-        : "-translate-y-full opacity-0"
-      }
-    `}>
+    <header className="sticky top-0 z-50 border-b bg-white/90 backdrop-blur-lg">
 
-      <div
-        className="
-    max-w-7xl
-    mx-auto
-    mt-3
-    px-8
-    py-2
-    flex
-    items-center
-    justify-between
-    bg-blue/10
-    backdrop-blur-xl
-    border
-    border-white/20
-    rounded-2xl
-    min-h-[80px]
-  "
-      >
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
 
         {/* Logo */}
-        <Link href="/" className="flex items-center">
+
+        <Link
+          href={`/${currentLocale}`}
+          className="flex items-center"
+        >
           <Image
             src="/SunshineLogo.png"
-            alt="Sunshine"
+            alt="Sunshine Agrichem"
             width={180}
-            height={80}
-            className="w-full object-contain" />
+            height={90}
+          />
+
+          <div className="hidden sm:block">
+            
+
+            <p className="-mt-1 text-xs text-green-800">
+              Agrichem
+            </p>
+          </div>
         </Link>
 
         {/* Desktop Menu */}
-        <nav className="hidden lg:flex items-center gap-8 font-medium text-black">
 
-          <Link href="/">Home</Link>
+        <nav className="hidden items-center gap-8 lg:flex">
 
-          <Link href="/Aboutus">About Us</Link>
+          {navigation.map((item) => (
+            <Link
+              key={item.href}
+              href={`/${currentLocale}${item.href}`}
+              className="text-sm font-medium text-gray-700 transition hover:text-green-600"
+            >
+              {item.name[currentLocale as "en" | "te" | "hi"]}
+            </Link>
+          ))}
 
-          {/* Products */}
-          <div className="relative group">
-            <button type="button" className="flex items-center gap-1">
-              Products
-              <ChevronDown size={16} />
-            </button>
-
-            <div className="absolute top-full left-0 mt-3 w-60 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-
-              <Link
-                href="/Products/biofertilizers"
-                className="block px-5 py-3 text-gray-700 hover:bg-gray-100"
-              >
-                Bio-Fertilizers
-              </Link>
-
-              <Link
-                href="/Products/bioenzymes"
-                className="block px-5 py-3 text-gray-700 hover:bg-gray-100"
-              >
-                Bio-Enzymes
-              </Link>
-
-              <Link
-                href="/Products/pestcontrollers"
-                className="block px-5 py-3 text-gray-700 hover:bg-gray-100"
-              >
-                Pest Controllers
-              </Link>
-
-            </div>
-          </div>
-
-          {/* Services */}
-          <div className="relative group">
-            <button type="button" className="flex items-center gap-1">
-              Services
-              <ChevronDown size={16} />
-            </button>
-
-            <div className="absolute top-full left-0 mt-3 w-60 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-
-              {services.map((service) => (
-                <Link
-                  key={service.id}
-                  href={service.href}
-                  className="block px-5 py-3 text-gray-700 hover:bg-gray-100"
-                >
-                  {service.name}
-                </Link>
-              ))}
-
-            </div>
-          </div>
-
-          <Link href="/Gallery">Gallery</Link>
-
-          <Link href="/Contactus">Contact Us</Link>
         </nav>
 
-        {/* CTA */}
-        <Link
-          href="/Contactus"
-          className="
-            hidden lg:flex
-            items-center
-            bg-green-600
-            hover:bg-green-700
-            text-white
-            px-6
-            py-3
-            rounded-full
-            font-semibold
-            transition
-          "
-        >
-          Contact Us
-        </Link>
+        {/* Right */}
 
-        {/* Mobile Button */}
-        <button
-          type="button"
-          onClick={() => {
-            setMenuOpen((prev) => {
-              if (prev) {
-                setProductOpen(false);
-                setServiceOpen(false);
+        <div className="flex items-center gap-3">
+
+          {/* Language */}
+
+          <div className="hidden items-center gap-2 rounded-full border px-3 py-2 md:flex">
+
+            <Globe
+              size={16}
+              className="text-green-600"
+            />
+
+            <select
+              value={currentLocale}
+              onChange={(e) =>
+                changeLanguage(e.target.value)
               }
-              return !prev;
-            });
-          }}
-          className="lg:hidden text-white"
-        >
-          {menuOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
-      </div>
-
-      {/* Mobile Menu */}
-      <div
-        className={`lg:hidden bg-white overflow-hidden transition-all duration-300 ${menuOpen ? "max-h-screen" : "max-h-0"
-          }`}
-      >
-        <div className="px-6 py-4">
-
-          <Link
-            href="/"
-            className="block py-3 border-b"
-            onClick={() => {
-              setMenuOpen(false);
-              setProductOpen(false);
-              setServiceOpen(false);
-            }}
-          >
-            Home
-          </Link>
-
-          <Link
-            href="/Aboutus"
-            className="block py-3 border-b"
-            onClick={() => {
-              setMenuOpen(false);
-              setProductOpen(false);
-              setServiceOpen(false);
-            }}
-          >
-            About Us
-          </Link>
-
-          {/* Products */}
-          <button
-            type="button"
-            className="w-full py-3 border-b flex justify-between items-center"
-            onClick={() => {
-              setProductOpen((prev) => !prev);
-              setServiceOpen(false);
-            }}
-          >
-            Products
-            <ChevronDown
-              className={`transition ${productOpen ? "rotate-180" : ""}`}
-            />
-          </button>
-
-          {productOpen && (
-            <div className="bg-gray-50">
-
-              <Link
-                href="/Products/biofertilizers"
-                className="block px-5 py-3"
-                onClick={() => {
-                  setMenuOpen(false);
-                  setProductOpen(false);
-                  setServiceOpen(false);
-                }}
-              >
-                Bio-Fertilizers
-              </Link>
-
-              <Link
-                href="/Products/bioenzymes"
-                className="block px-5 py-3"
-                onClick={() => {
-                  setMenuOpen(false);
-                  setProductOpen(false);
-                  setServiceOpen(false);
-                }}
-              >
-                Bio-Enzymes
-              </Link>
-
-              <Link
-                href="/Products/pestcontrollers"
-                className="block px-5 py-3"
-                onClick={() => {
-                  setMenuOpen(false);
-                  setProductOpen(false);
-                  setServiceOpen(false);
-                }}
-              >
-                Pest Controllers
-              </Link>
-
-            </div>
-          )}
-
-          {/* Services */}
-          <button
-            type="button"
-            className="w-full py-3 border-b flex justify-between items-center"
-            onClick={() => {
-              setServiceOpen((prev) => !prev);
-              setProductOpen(false);
-            }}
-          >
-            Services
-            <ChevronDown
-              className={`transition ${serviceOpen ? "rotate-180" : ""}`}
-            />
-          </button>
-
-          {serviceOpen && (
-            <div className="bg-gray-50">
-
-              {services.map((service) => (
-                <Link
-                  key={service.id}
-                  href={service.href}
-                  className="block px-5 py-3"
-                  onClick={() => {
-                    setMenuOpen(false);
-                    setProductOpen(false);
-                    setServiceOpen(false);
-                  }}
+              className="bg-transparent text-sm outline-none"
+            >
+              {languages.map((language) => (
+                <option
+                  key={language.code}
+                  value={language.code}
                 >
-                  {service.name}
-                </Link>
+                  {language.label}
+                </option>
               ))}
+            </select>
 
-            </div>
-          )}
+          </div>
 
-          <Link
-            href="/Gallery"
-            className="block py-3 border-b"
-            onClick={() => setMenuOpen(false)}
-          >
-            Gallery
-          </Link>
+          {/* CTA */}
 
           <Link
-            href="/Contactus"
-            className="block py-3"
-            onClick={() => setMenuOpen(false)}
+            href={`/${currentLocale}/contact`}
+            className="hidden rounded-lg bg-green-600 px-5 py-2 text-sm font-semibold text-white transition hover:bg-green-700 lg:block"
           >
             Contact Us
           </Link>
 
-          <Link
-            href="/Contactus"
-            className="mt-5 block text-center bg-green-600 text-white py-3 rounded-xl font-semibold"
-            onClick={() => setMenuOpen(false)}
+          {/* Mobile */}
+
+          <button
+            onClick={() =>
+              setMobileMenu(!mobileMenu)
+            }
+            className="lg:hidden"
           >
-            Get Quote
-          </Link>
+            {mobileMenu ? (
+              <X size={26} />
+            ) : (
+              <Menu size={26} />
+            )}
+          </button>
 
         </div>
+
       </div>
+
+      {/* Mobile Menu */}
+
+      {mobileMenu && (
+
+        <div className="border-t bg-white lg:hidden">
+
+          <div className="space-y-2 p-4">
+
+            {navigation.map((item) => (
+              <Link
+                key={item.href}
+                href={`/${currentLocale}${item.href}`}
+                onClick={() =>
+                  setMobileMenu(false)
+                }
+                className="block rounded-lg p-3 transition hover:bg-green-50"
+              >
+                {item.name[currentLocale as "en" | "te" | "hi"]}
+              </Link>
+            ))}
+
+            <div className="mt-4 flex items-center gap-2 rounded-lg border p-3">
+
+              <Globe size={18} />
+
+              <select
+                value={currentLocale}
+                onChange={(e) =>
+                  changeLanguage(e.target.value)
+                }
+                className="w-full bg-transparent outline-none"
+              >
+                {languages.map((language) => (
+                  <option
+                    key={language.code}
+                    value={language.code}
+                  >
+                    {language.label}
+                  </option>
+                ))}
+              </select>
+
+            </div>
+
+            <Link
+              href={`/${currentLocale}/contact`}
+              className="mt-4 block rounded-lg bg-green-600 py-3 text-center font-semibold text-white"
+            >
+              Contact Us
+            </Link>
+
+          </div>
+
+        </div>
+
+      )}
     </header>
   );
 }
