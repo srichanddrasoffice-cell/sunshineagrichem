@@ -75,28 +75,28 @@ const buildProduct = (
 
 export const products: Product[] = [
   buildProduct(
-    "hucid",
-    "hucid",
+    "suntop",
+    "suntop",
     "Nutrition",
-    "/products/hucid.png",
+    "/products/suntop.png",
     {
-      en: "Hucid",
+      en: "Suntop",
       te: "హుసిక్",
       hi: "हुसिक",
     },
     {
-      en: "Balanced crop nutrition for high-yielding fields.",
-      te: "ఎక్కువ దిగుబడి కోసం సమతుల్య పంట పోషకాలు.",
+      en: "Suntop make your crops achieve high yields by increasing beneficial insects and providing extra power to stand with adverse climate conditions.",
+      te: "సన్‌టాప్ వాడటం ద్వారా పంటలు అధిక దిగుబడిని అందుకుంటాయి. ఇది ఉపయోగకరమైన సూక్ష్మజీవుల చురుకుదనాన్ని పెంచి, ప్రతికూల వాతావరణ పరిస్థితులను తట్టుకునే శక్తిని మొక్కలకు అందిస్తుంది.",
       hi: "उच्च उपज वाले खेतों के लिए संतुलित फसल पोषण।",
     },
     {
-      en: "A scientifically formulated nutrient blend designed for cereals and vegetables.",
+      en: "Suntop make your crops achieve high yields by increasing beneficial insects and providing extra power to stand with adverse climate conditions.",
       te: "ధాన్యాలు మరియు కూరగాయలకు రూపొందించిన శాస్త్రీయంగా రూపొందించబడిన పోషక మిశ్రమం.",
       hi: "अनाज और सब्जियों के लिए वैज्ञानिक रूप से तैयार किया गया पोषक मिश्रण।",
     },
     {
-      en: "Apply 2-3 liters per acre during early growth stages.",
-      te: "తొలి వృద్ధి దశలలో ఒక ఎకరానికి 2-3 లీటర్లు ప్రయోగించండి.",
+      en: "4kg (Paddy), 8kg (Sugarcane), or 6–7kg (Vegetables)/per Acer.",
+      te: "మోతాదు: వరి – 4 కిలోలు/ఎకరం | చెరకు – 8 కిలోలు/ఎకరం | కూరగాయలు – 6 నుండి 7 కిలోలు/ఎకరం",
       hi: "विकास की प्रारंभिक अवस्थाओं में प्रति एकड़ 2-3 लीटर का उपयोग करें।",
     },
     {
@@ -193,7 +193,7 @@ export const products: Product[] = [
     "leaf-gold",
     "leaf-gold",
     "Foliar",
-    "/products/Quantum.png",
+    "/products/quantum.png",
     {
       en: "Leaf Gold",
       te: "లీఫ్ గోల్డ్",

@@ -35,17 +35,49 @@ export function HeroForm({ dictionary }: HeroFormProps) {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-3 sm:space-y-5">
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="
+    space-y-6
+    rounded-3xl
+    border
+    border-white/40
+    bg-white/80
+    p-8
+    shadow-2xl
+    backdrop-blur-xl
+  "
+    >
       {/* Name */}
       <div>
+        <label className="mb-2 block text-lg font-semibold text-slate-800">
+          👨‍🌾 {dictionary.contact.name}
+        </label>
+
         <input
           {...register("name")}
-          placeholder={dictionary.contact.name}
-          className="w-full rounded-2xl border border-slate-200 bg-white/90 px-4 py-3 text-sm outline-none transition focus:border-emerald-500 sm:px-5 sm:py-3.5"
+          placeholder="మీ పూర్తి పేరు"
+          className="
+        h-10
+        w-full
+        rounded-2xl
+        border-2
+        border-slate-200
+        bg-slate-50
+        px-4
+        text-lg
+        font-medium
+        text-slate-900
+        outline-none
+        transition-all
+        duration-200
+        focus:border-emerald-600
+        focus:bg-white
+      "
         />
 
         {errors.name && (
-          <p className="mt-1 text-sm text-red-600">
+          <p className="mt-2 text-sm text-red-600">
             {errors.name.message}
           </p>
         )}
@@ -53,30 +85,96 @@ export function HeroForm({ dictionary }: HeroFormProps) {
 
       {/* Location */}
       <div>
+        <label className="mb-2 block text-lg font-semibold text-slate-800">
+          📍 {dictionary.contact.location}
+        </label>
+
         <input
           {...register("location")}
-          placeholder={dictionary.contact.location}
-          className="w-full rounded-2xl border border-slate-200 bg-white/90 px-4 py-3 text-sm outline-none transition focus:border-emerald-500 sm:px-5 sm:py-3.5"
+          placeholder="మీ గ్రామం / జిల్లా"
+          className="
+        h-10    
+        w-full
+        rounded-2xl
+        border-2
+        border-slate-200
+        bg-slate-50
+        px-4
+        text-lg
+        font-medium
+        text-slate-900
+        outline-none
+        transition-all
+        duration-200
+        focus:border-emerald-600
+        focus:bg-white
+      "
         />
 
         {errors.location && (
-          <p className="mt-1 text-sm text-red-600">
+          <p className="mt-2 text-sm text-red-600">
             {errors.location.message}
           </p>
         )}
+      </div>
+
+      {/* Crop Name */}
+      <div>
+        <label className="mb-2 block text-lg font-semibold text-slate-800">
+          🌾 పంట పేరు
+        </label>
+
+        <input
+          {...register("cropName" as any)}
+          placeholder="ఉదా: వరి, పత్తి, మిర్చి, మొక్కజొన్న"
+          className="
+        h-10
+        w-full
+        rounded-2xl
+        border-2
+        border-slate-200
+        bg-slate-50
+        px-4
+        text-lg
+        font-medium
+        text-slate-900
+        outline-none
+        transition-all
+        duration-200
+        focus:border-emerald-600
+        focus:bg-white
+      "
+        />
       </div>
 
       {/* Submit */}
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full rounded-2xl bg-emerald-600 px-4 py-3 font-semibold text-white transition-all duration-300 hover:bg-emerald-700 hover:shadow-lg disabled:opacity-70 sm:px-5 sm:py-3.5"
+        className="
+      h-15
+      w-full
+      rounded-2xl
+      bg-gradient-to-r
+      from-emerald-600
+      to-green-500
+      text-lg
+      font-bold
+      text-white
+      shadow-lg
+      transition-all
+      duration-300
+      hover:-translate-y-0.5
+      hover:shadow-xl
+      disabled:opacity-60
+      disabled:hover:translate-y-0
+    "
       >
         {isSubmitting ? "Submitting..." : dictionary.contact.submit}
       </button>
 
       {submitted && (
-        <p className="text-center text-sm font-medium text-emerald-700">
+        <p className="rounded-xl bg-emerald-50 p-3 text-center text-sm font-medium text-emerald-700">
           {dictionary.contact.successDescription}
         </p>
       )}
