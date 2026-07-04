@@ -16,9 +16,9 @@ const steps = [
 export default function OurStory() {
   return (
     <section className="py-24 bg-white">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center mb-20">
-          <h2 className="text-5xl font-bold">Our Story</h2>
+          <h2 className="text-3xl font-bold sm:text-5xl">Our Story</h2>
         </div>
 
         <div className="grid md:grid-cols-3 gap-10">
@@ -27,11 +27,11 @@ export default function OurStory() {
               key={step.title}
               className="border rounded-3xl p-8"
             >
-              <span className="text-6xl font-bold text-green-100">
+              <span className="text-4xl font-bold text-green-100 sm:text-6xl">
                 0{index + 1}
               </span>
 
-              <h3 className="text-2xl font-bold mt-5">
+              <h3 className="mt-5 text-xl font-bold sm:text-2xl">
                 {step.title}
               </h3>
 

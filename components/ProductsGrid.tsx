@@ -1,13 +1,12 @@
-import ProductCard from "@/components/ProductCard";
-import { products, Locale } from "@/data/products";
+import { ProductCard } from "@/components/products/ProductCard";
+import { products } from "@/data/products/index";
+import type { Locale } from "@/lib/i18n";
 
 interface ProductsGridProps {
   locale: Locale;
 }
 
 export default function ProductsGrid({ locale }: ProductsGridProps) {
-  const activeProducts = products.filter((product) => product.active);
-
   return (
     <section className="mx-auto w-full max-w-7xl px-2 py-4 sm:px-6 sm:py-10 lg:px-8">
       <div className="mb-4 sm:mb-8">
@@ -28,9 +27,9 @@ export default function ProductsGrid({ locale }: ProductsGridProps) {
         </p>
       </div>
 
-      <div className="grid grid-cols-2 gap-2.5 sm:gap-4 md:grid-cols-3 lg:grid-cols-4">
-        {activeProducts.map((product) => (
-          <ProductCard key={product.id} product={product} locale={locale} />
+      <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
+        {products.map((product, index) => (
+          <ProductCard key={product.id} product={product} locale={locale} autoFlip={index === 0} />
         ))}
       </div>
     </section>

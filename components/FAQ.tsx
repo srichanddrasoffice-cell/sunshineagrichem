@@ -46,11 +46,11 @@ const FAQ = () => {
   };
 
   return (
-    <section className="py-10 sm:py-14 md:py-16 bg-white">
+    <section className="bg-white py-8 sm:py-14 md:py-16">
       <div className="max-w-3xl mx-auto px-4 sm:px-6">
 
         {/* HEADING */}
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#D5101A] text-center mb-6 sm:mb-10">
+        <h2 className="mb-5 text-xl font-bold text-center text-[#D5101A] sm:mb-10 sm:text-3xl md:text-4xl">
           Frequently Asked Questions
         </h2>
 
@@ -69,7 +69,7 @@ const FAQ = () => {
                 onClick={() => toggleFAQ(index)}
                 className="w-full flex items-center justify-between px-4 sm:px-5 py-3.5 sm:py-4 text-left hover:bg-gray-50 transition-colors gap-3"
               >
-                <h4 className="font-semibold text-gray-900 text-sm sm:text-base leading-snug">
+                <h4 className="text-sm font-semibold leading-snug text-gray-900 sm:text-base">
                   {item.q}
                 </h4>
 
@@ -98,7 +98,7 @@ const FAQ = () => {
                   >
                     <div className="px-4 sm:px-5 pb-4 pt-0">
                       <div className="border-t border-gray-100 pt-3">
-                        <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                        <p className="text-xs leading-relaxed text-gray-600 sm:text-sm">
                           {item.a}
                         </p>
                       </div>

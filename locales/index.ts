@@ -1,13 +1,12 @@
-import en from "./en";
-import te from "./te";
-import hi from "./hi";
+import { en } from "./en/index";
+import { hi } from "./hi/index";
+import { te } from "./te/index";
+import type { DictionaryMap } from "@/types/dictionary";
 
-export const translations = {
-
-en,
-
-te,
-
-hi
-
+export const dictionaries: DictionaryMap = {
+  en,
+  te,
+  hi,
 };
+
+export const translations = dictionaries;

@@ -1,14 +1,14 @@
 export default function WhoWeAre() {
   return (
     <section className="py-24 bg-white">
-      <div className="container mx-auto px-6 max-w-7xl">
+      <div className="container mx-auto max-w-7xl px-4 sm:px-6">
 
         <div className="text-center mb-16">
           <span className="text-green-600 font-semibold">
             WHO WE ARE
           </span>
 
-          <h2 className="text-4xl md:text-5xl font-bold mt-4">
+          <h2 className="mt-4 text-3xl font-bold sm:text-4xl md:text-5xl">
             Agriculture with Purpose.
             <span className="text-green-600 block">
               Innovation with Responsibility.

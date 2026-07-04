@@ -33,12 +33,12 @@ export default function AboutUs() {
   const [activeTab, setActiveTab] = useState<TabId>("mission");
 
   return (
-    <section className="relative bg-gradient-to-b from-white to-green-50 py-20 lg:py-28 px-6 overflow-hidden">
+    <section className="relative overflow-hidden bg-gradient-to-b from-white to-green-50 px-4 py-12 sm:px-6 sm:py-20 lg:py-28">
       {/* Background Decorations */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-green-100 rounded-full blur-3xl opacity-40" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-green-200 rounded-full blur-3xl opacity-30" />
 
-      <div className="relative max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+      <div className="relative mx-auto grid max-w-7xl items-center gap-8 sm:gap-16 lg:grid-cols-2">
         {/* ================= LEFT SIDE IMAGES ================= */}
         <div className="relative">
           <div className="grid grid-cols-2 gap-5">
@@ -71,17 +71,17 @@ export default function AboutUs() {
           </div>
 
           {/* Floating Stats Card */}
-          <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-white rounded-3xl shadow-2xl px-8 py-5 border border-gray-100">
-            <div className="flex items-center gap-8">
+          <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 rounded-3xl border border-gray-100 bg-white px-4 py-4 shadow-2xl sm:-bottom-8 sm:px-8 sm:py-5">
+            <div className="flex items-center gap-4 sm:gap-8">
               <div className="text-center">
-                <h3 className="text-3xl font-bold text-[#2e7d4f]">10+</h3>
+                <h3 className="text-2xl font-bold text-[#2e7d4f] sm:text-3xl">10+</h3>
                 <p className="text-sm text-gray-500">Years</p>
               </div>
 
               <div className="w-px h-12 bg-gray-200" />
 
               <div className="text-center">
-                <h3 className="text-3xl font-bold text-[#2e7d4f]">5000+</h3>
+                <h3 className="text-2xl font-bold text-[#2e7d4f] sm:text-3xl">5000+</h3>
                 <p className="text-sm text-gray-500">Farmers</p>
               </div>
             </div>
@@ -99,7 +99,7 @@ export default function AboutUs() {
           </div>
 
           {/* Heading */}
-          <h2 className="text-4xl md:text-5xl xl:text-6xl font-bold text-slate-900 leading-[1.1] mb-6">
+          <h2 className="mb-4 text-3xl font-bold leading-[1.1] text-slate-900 sm:mb-6 sm:text-4xl md:text-5xl xl:text-6xl">
             Empowering Farmers Through
             <span className="block text-[#2e7d4f]">
               Sustainable Agriculture
@@ -107,7 +107,7 @@ export default function AboutUs() {
           </h2>
 
           {/* Description */}
-<p className="text-gray-600 text-lg leading-8 mb-8 max-w-xl">            Sunshine Inc. partners with farmers across India to deliver
+<p className="mb-6 max-w-xl text-sm leading-7 text-gray-600 sm:mb-8 sm:text-lg sm:leading-8">            Sunshine Inc. partners with farmers across India to deliver
             innovative agricultural solutions that improve productivity,
             enhance soil health, and promote sustainable farming practices.
             Through advanced research, eco-friendly products, and continuous
@@ -115,12 +115,12 @@ export default function AboutUs() {
           </p>
 
           {/* Tabs */}
-          <div className="flex flex-wrap gap-3 mb-8">
+          <div className="mb-6 flex flex-wrap gap-2 sm:mb-8 sm:gap-3">
             {TABS.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300 ${activeTab === tab.id
+                className={`rounded-full px-4 py-2 text-xs font-semibold transition-all duration-300 sm:px-6 sm:py-3 sm:text-sm ${activeTab === tab.id
                     ? "bg-[#2e7d4f] text-white shadow-lg scale-105"
                     : "bg-white border border-gray-200 text-gray-700 hover:bg-gray-100"
                   }`}

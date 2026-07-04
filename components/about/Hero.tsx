@@ -13,30 +13,30 @@ export default function Hero() {
 
       <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
 
-      <div className="relative z-10 container mx-auto px-6">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6">
         <div className="max-w-3xl text-white">
-          <span className="inline-block bg-green-600 px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <span className="inline-block bg-green-600 px-3 py-1.5 rounded-full text-xs font-medium mb-4 sm:px-4 sm:py-2 sm:text-sm sm:mb-6">
             Since 2015
           </span>
 
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+          <h1 className="text-3xl font-bold leading-tight sm:text-5xl md:text-7xl">
             Growing India's Future,
             <span className="text-green-400 block">
               Naturally
             </span>
           </h1>
 
-          <p className="mt-8 text-lg md:text-xl text-gray-200 leading-relaxed">
+          <p className="mt-5 text-sm leading-6 text-gray-200 sm:mt-8 sm:text-lg md:text-xl md:leading-relaxed">
             Empowering farmers with innovative, eco-friendly agricultural
             solutions that improve productivity while preserving soil health.
           </p>
 
-          <div className="flex flex-wrap gap-4 mt-10">
-            <button className="bg-green-600 hover:bg-green-700 px-8 py-4 rounded-xl font-semibold">
+          <div className="mt-6 flex flex-wrap gap-3 sm:mt-10 sm:gap-4">
+            <button className="rounded-xl bg-green-600 px-5 py-3 text-sm font-semibold hover:bg-green-700 sm:px-8 sm:py-4">
               Explore Products
             </button>
 
-            <button className="border border-white px-8 py-4 rounded-xl hover:bg-white hover:text-black transition">
+            <button className="rounded-xl border border-white px-5 py-3 text-sm hover:bg-white hover:text-black transition sm:px-8 sm:py-4">
               Become a Dealer
             </button>
           </div>
