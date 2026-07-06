@@ -19,7 +19,7 @@ export function Hero({ dictionary }: HeroProps) {
       <div
         className="absolute inset-0 bg-cover  bg-no-repeat"
         style={{
-          backgroundImage: "url('/herbg.png')",
+          backgroundImage: "url('/gpther.png')",
         }}
       />
 
@@ -61,23 +61,18 @@ export function Hero({ dictionary }: HeroProps) {
           {/* CTA Buttons */}
           <div className="mt-6 flex flex-wrap gap-3 sm:mt-8 sm:gap-4">
             <Link
-              href="/en/contact"
-              className="inline-flex items-center gap-2 rounded-full bg-emerald-600 px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-emerald-600/30 transition-all duration-300 hover:scale-105 hover:bg-emerald-700 sm:px-6 sm:py-3"
+              href="/en/products"
+              className="mx-auto sm:mx-0 inline-flex items-center gap-2 rounded-full bg-emerald-600 px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-emerald-600/30 transition-all duration-300 hover:scale-105 hover:bg-emerald-700 sm:px-6 sm:py-3"
             >
               {dictionary.hero.ctaPrimary}
               <ArrowRight size={18} />
             </Link>
 
-            <Link
-              href="/en/products"
-              className="rounded-full border border-slate-300 bg-white/80 px-4 py-2.5 text-sm font-semibold text-slate-800 backdrop-blur transition-all duration-300 hover:bg-white hover:shadow-lg sm:px-6 sm:py-3"
-            >
-              {dictionary.hero.ctaSecondary}
-            </Link>
+
           </div>
 
           {/* Feature Chips */}
-          
+
         </motion.div>
 
         {/* Right Form */}
@@ -87,7 +82,7 @@ export function Hero({ dictionary }: HeroProps) {
           transition={{ duration: 0.7 }}
           className="relative"
         >
-          <div className="rounded-[1.5rem] border border-white/60 bg-white/75 p-4 shadow-[0_30px_80px_rgba(15,23,42,0.15)] backdrop-blur-xl sm:rounded-[2rem] sm:p-6">
+          <div className="p-4 sm:p-6">
             {/* Form Title */}
             <div className="mb-4 flex items-center gap-2 rounded-full bg-emerald-50 px-3 py-1.5 text-xs font-medium text-emerald-700 sm:mb-6 sm:gap-3 sm:px-4 sm:py-2 sm:text-sm">
               <ShieldCheck size={16} />
@@ -97,11 +92,7 @@ export function Hero({ dictionary }: HeroProps) {
             {/* Contact Form */}
             <HeroForm dictionary={dictionary} />
 
-            {/* Bottom Info */}
-            <div className="mt-4 flex items-center gap-2 rounded-2xl border border-emerald-100 bg-emerald-50/80 p-3 text-xs leading-5 text-slate-700 sm:mt-6 sm:gap-3 sm:p-4 sm:text-sm sm:leading-6">
-              <Droplets size={18} className="text-emerald-600 shrink-0" />
-              <span>{dictionary.hero.formDescription}</span>
-            </div>
+
           </div>
         </motion.div>
       </div>

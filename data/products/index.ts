@@ -80,13 +80,13 @@ export const products: Product[] = [
     "Nutrition",
     "/products/suntop.png",
     {
-      en: "Suntop",
-      te: "హుసిక్",
-      hi: "हुसिक",
+      en: "SUNTOP",
+      te: "సన్ టాప్",
+      hi: "सनटॉप",
     },
     {
       en: "Suntop make your crops achieve high yields by increasing beneficial insects and providing extra power to stand with adverse climate conditions.",
-      te: "సన్‌టాప్ వాడటం ద్వారా పంటలు అధిక దిగుబడిని అందుకుంటాయి. ఇది ఉపయోగకరమైన సూక్ష్మజీవుల చురుకుదనాన్ని పెంచి, ప్రతికూల వాతావరణ పరిస్థితులను తట్టుకునే శక్తిని మొక్కలకు అందిస్తుంది.",
+      te: "సన్ టాప్ ప్రయోజనకరమైన కీటకాల సంఖ్యను పెంచి, ప్రతికూల వాతావరణ పరిస్థితుల్లో నిలబడటానికి అదనపు బలాన్ని ఇస్తుంది.",
       hi: "उच्च उपज वाले खेतों के लिए संतुलित फसल पोषण।",
     },
     {
@@ -104,7 +104,7 @@ export const products: Product[] = [
       te: ["మూల బలాన్ని మెరుగుపరుస్తుంది", "పూలను ప్రోత్సహిస్తుంది", "రంగును మెరుగుపరుస్తుంది"],
       hi: ["जड़ शक्ति बढ़ाता है", "फूल आने में मदद करता है", "रंग को बेहतर बनाता है"],
     },
-    true,
+    false,
     {
       composition: {
         en: ["12% Humic Acid", "Drip Special", "Improves Soil", "Better Root Growth"],
@@ -128,18 +128,18 @@ export const products: Product[] = [
     },
   ),
   buildProduct(
-    "pest-shield",
-    "pest-shield",
+    "allright-gr",
+    "allright-gr",
     "Protection",
-    "/products/no1.png",
+    "/products/allrightgr.png",
     {
-      en: "Pest Shield",
-      te: "పెస్ట్ షీల్డ్",
+      en: "ALL RIGHT GR",
+      te: "ఆల్‌రైట్GR",
       hi: "पेस्ट शील्ड",
     },
     {
-      en: "Reliable field protection against common pests.",
-      te: "సాధారణ పురుగుల నుంచి విశ్వసనీయ క్షేత్ర రక్షణ.",
+      en: "Allright GR make your crops develop excellent root systems and more tillers, which helps in suppression of weeds and improves soil structure.",
+      te: "అద్భుతమైన వేరు వ్యవస్థలు మరియు ఎక్కువ కొమ్మలను అభివృద్ధి చేస్తుంది.",
       hi: "सामान्य कीटों से विश्वसनीय खेत संरक्षण।",
     },
     {
@@ -157,20 +157,42 @@ export const products: Product[] = [
       te: ["త్వరగా చర్య", "పొడవైన అవశేష ప్రభావం", "సురక్షిత అనువర్తనం"],
       hi: ["तेज़ कार्रवाई", "लंबा अवशेष प्रभाव", "सुरक्षित उपयोग"],
     },
+    true,
+    {
+      composition: {
+        en: ["12% Humic Acid", "Drip Special", "Improves Soil", "Better Root Growth"],
+        te: ["12% హ్యూమిక్ యాసిడ్", "డ్రిప్ స్పెషల్", "నేల ఆరోగ్యం", "వేర్ల వృద్ధి"],
+        hi: ["12% ह्यूमिक एसिड", "ड्रिप स्पेशल", "मिट्टी स्वास्थ्य", "बेहतर जड़ वृद्धि"],
+      },
+      specifications: {
+        en: [
+          { label: "Form", value: "Liquid" },
+          { label: "Packaging", value: "1 liter bottle" },
+        ],
+        te: [
+          { label: "రూపం", value: "ద్రవం" },
+          { label: "ప్యాకేజింగ్", value: "5kg" },
+        ],
+        hi: [
+          { label: "प्रकार", value: "तरल" },
+          { label: "पैकेजिंग", value: "1 लीटर बोतल" },
+        ],
+      },
+    },
   ),
   buildProduct(
-    "soil-boost",
-    "soil-boost",
+    "kohinoor",
+    "kohinoor",
     "Soil Health",
-    "/products/lion.png",
+    "/products/kohinoor.png",
     {
-      en: "Soil Boost",
-      te: "సాయిల్ బూస్ట్",
+      en: "KOHINOOR",
+      te: "కోహినూర్",
       hi: "सॉइल बूस्ट",
     },
     {
-      en: "Improves soil structure and moisture retention.",
-      te: "మట్టి నిర్మాణం మరియు తేమ నిలుపుదలను మెరుగుపరుస్తుంది.",
+      en: "Kohinoor make your crops withstand stress and drought while reducing flower dropping through seaweed-based bio-stimulants for better quality.",
+      te: "కోహినూర్ ఒత్తిడి మరియు కరువును తట్టుకోవడం ద్వారా పూత రాలడాన్ని తగ్గిస్తుంది.",
       hi: "मिट्टी की संरचना और नमी प्रतिधारण में सुधार करता है।",
     },
     {
@@ -188,20 +210,42 @@ export const products: Product[] = [
       te: ["మెరుగైన వాయు వినిమయం", "ఎక్కువ నీరు నిలుపుదల", "బలమైన వేర్లు"],
       hi: ["बेहतर वायु निकास", "अधिक जल प्रतिधारण", "मजबूत जड़ें"],
     },
+    true,
+    {
+      composition: {
+        en: ["12% Humic Acid", "Drip Special", "Improves Soil", "Better Root Growth"],
+        te: ["12% హ్యూమిక్ యాసిడ్", "డ్రిప్ స్పెషల్", "నేల ఆరోగ్యం", "వేర్ల వృద్ధి"],
+        hi: ["12% ह्यूमिक एसिड", "ड्रिप स्पेशल", "मिट्टी स्वास्थ्य", "बेहतर जड़ वृद्धि"],
+      },
+      specifications: {
+        en: [
+          { label: "Form", value: "Liquid" },
+          { label: "Packaging", value: "1 liter bottle" },
+        ],
+        te: [
+          { label: "రూపం", value: "ద్రవం" },
+          { label: "ప్యాకేజింగ్", value: "5kg" },
+        ],
+        hi: [
+          { label: "प्रकार", value: "तरल" },
+          { label: "पैकेजिंग", value: "1 लीटर बोतल" },
+        ],
+      },
+    },
   ),
   buildProduct(
-    "leaf-gold",
-    "leaf-gold",
+    "hucid",
+    "hucid",
     "Foliar",
-    "/products/quantum.png",
+    "/products/hucid.png",
     {
-      en: "Leaf Gold",
-      te: "లీఫ్ గోల్డ్",
+      en: "HUCID",
+      te: "హ్యూసిడ్",
       hi: "लीफ गोल्ड",
     },
     {
-      en: "Fast foliar feeding for greener leaves.",
-      te: "ಹಸಿರು ಎಲೆలకు వేగవంతమైన ఫోలియార్ ఫీడింగ్.",
+      en: " Hucid make your crops yield higher by accelerating germination, inducing early maturity, and enhancing seedling vigour and root growth.",
+      te: "హ్యూసిడ్ మొలక వేగాన్ని పెంచుతుంది, ముందస్తు పక్వతను ప్రేరేపిస్తుంది మరియు మొక్కల శక్తి, వేరు పెరుగుదలను మెరుగుపరుస్తుంది.",
       hi: "हरे पत्तियों के लिए तेज पत्तीय पोषण।",
     },
     {
@@ -219,20 +263,42 @@ export const products: Product[] = [
       te: ["ಹಸಿರು పత్రాలు", "ವೇಗవంతమైన కోలుకోవడం", "మెరుగైన శక్తి"],
       hi: ["हरी पत्तियाँ", "तेज़ रिकवरी", "बेहतर vigor"],
     },
+     true,
+    {
+      composition: {
+        en: ["12% Humic Acid", "Drip Special", "Improves Soil", "Better Root Growth"],
+        te: ["12% హ్యూమిక్ యాసిడ్", "డ్రిప్ స్పెషల్", "నేల ఆరోగ్యం", "వేర్ల వృద్ధి"],
+        hi: ["12% ह्यूमिक एसिड", "ड्रिप स्पेशल", "मिट्टी स्वास्थ्य", "बेहतर जड़ वृद्धि"],
+      },
+      specifications: {
+        en: [
+          { label: "Form", value: "Liquid" },
+          { label: "Packaging", value: "1 liter bottle" },
+        ],
+        te: [
+          { label: "రూపం", value: "ద్రవం" },
+          { label: "ప్యాకేజింగ్", value: "5kg" },
+        ],
+        hi: [
+          { label: "प्रकार", value: "तरल" },
+          { label: "पैकेजिंग", value: "1 लीटर बोतल" },
+        ],
+      },
+    },
   ),
   buildProduct(
-    "root-max",
-    "root-max",
+    "marq999",
+    "marq999",
     "Root Care",
-    "/products/allright.png",
+    "/products/marq999.png",
     {
-      en: "Root Max",
-      te: "రూట్ మాక్స్",
+      en: "MARQ999",
+      te: "మార్క్999",
       hi: "रूट मैक्स",
     },
     {
-      en: "Strengthens roots and improves plant establishment.",
-      te: "వేర్లను బలోపేతం చేసి మొక్క స్థాపనను మెరుగుపరుస్తుంది.",
+      en: "Marq999 make your crops grow healthy by improving metabolic action and resisting shedding of flowers to improve fruit forming capacity and yield.",
+      te: "మార్క్999 మెటబాలిక్ చర్యను మెరుగుపరుస్తుంది మరియు పూలు రాలిపోకుండా నిరోధించి, పండ్లు ఏర్పడే సామర్థ్యాన్ని మరియు దిగుబడిని పెంచుతుంది.",
       hi: "जड़ों को मजबूत करता है और पौधे की स्थापना में सुधार करता है।",
     },
     {
@@ -250,20 +316,42 @@ export const products: Product[] = [
       te: ["బలమైన మూలం సముదాయం", "మెరుగైన బతుకుదై", "మెరుగైన గ్రహణశక్తి"],
       hi: ["मजबूत जड़ द्रव्यमान", "बेहतर अस्तित्व", "बेहतर अवशोषण"],
     },
+        true,
+    {
+      composition: {
+        en: ["12% Humic Acid", "Drip Special", "Improves Soil", "Better Root Growth"],
+        te: ["12% హ్యూమిక్ యాసిడ్", "డ్రిప్ స్పెషల్", "నేల ఆరోగ్యం", "వేర్ల వృద్ధి"],
+        hi: ["12% ह्यूमिक एसिड", "ड्रिप स्पेशल", "मिट्टी स्वास्थ्य", "बेहतर जड़ वृद्धि"],
+      },
+      specifications: {
+        en: [
+          { label: "Form", value: "Liquid" },
+          { label: "Packaging", value: "1 liter bottle" },
+        ],
+        te: [
+          { label: "రూపం", value: "ద్రవం" },
+          { label: "ప్యాకేజింగ్", value: "5kg" },
+        ],
+        hi: [
+          { label: "प्रकार", value: "तरल" },
+          { label: "पैकेजिंग", value: "1 लीटर बोतल" },
+        ],
+      },
+    },
   ),
   buildProduct(
-    "crop-vital",
-    "crop-vital",
+    "power",
+    "power",
     "Nutrition",
-    "/products/sarkar.png",
+    "/products/power.png",
     {
-      en: "Crop Vital",
-      te: "క్రాప్ విల్ట్",
+      en: "POWER",
+      te: "పవర్",
       hi: "क्रॉप वाइटल",
     },
     {
-      en: "Complete nutrition for healthy, high-performing crops.",
-      te: "ఆరోగ్యకరమైన, అధిక సామర్థ్యం గల పంటలకు సంపూర్ణ పోషణ.",
+      en: "Power make your crops resist yellowing and reddening while improving metabolic action to ensure plants grow healthy with uniform pollination.",
+      te: "పవర్ పంటలను పచ్చగా మరియు ఎర్రగా మారకుండా కాపాడుతుంది మరియు సమానమైన పరాగ సంపర్కంతో పంట ఆరోగ్యంగా పెరగడానికి సహాయపడుతుంది.",
       hi: "स्वस्थ और उच्च-प्रदर्शन वाली फसलों के लिए पूर्ण पोषण।",
     },
     {
@@ -281,20 +369,42 @@ export const products: Product[] = [
       te: ["సమతుల్య పోషణ", "మెరుగైన శక్తి", "ఎక్కువ దిగుబడి"],
       hi: ["संतुलित पोषण", "बेहतर vigor", "ऊँची उपज"],
     },
+        true,
+    {
+      composition: {
+        en: ["12% Humic Acid", "Drip Special", "Improves Soil", "Better Root Growth"],
+        te: ["12% హ్యూమిక్ యాసిడ్", "డ్రిప్ స్పెషల్", "నేల ఆరోగ్యం", "వేర్ల వృద్ధి"],
+        hi: ["12% ह्यूमिक एसिड", "ड्रिप स्पेशल", "मिट्टी स्वास्थ्य", "बेहतर जड़ वृद्धि"],
+      },
+      specifications: {
+        en: [
+          { label: "Form", value: "Liquid" },
+          { label: "Packaging", value: "1 liter bottle" },
+        ],
+        te: [
+          { label: "రూపం", value: "ద్రవం" },
+          { label: "ప్యాకేజింగ్", value: "5kg" },
+        ],
+        hi: [
+          { label: "प्रकार", value: "तरल" },
+          { label: "पैकेजिंग", value: "1 लीटर बोतल" },
+        ],
+      },
+    },
   ),
   buildProduct(
-    "green-guard",
-    "green-guard",
+    "powerstar",
+    "powerstar",
     "Protection",
-    "/products/hycross.png",
+    "/products/powerstar.png",
     {
-      en: "Green Guard",
-      te: "గ్రీన్ గార్డ్",
-      hi: "ग्रीन गार्ड",
+      en: "POWER STAR",
+      te: "పవర్ స్టార్",
+      hi: "POWER STAR",
     },
     {
-      en: "Protects crops from stress and opportunistic disease.",
-      te: "పంటలను పీడన మరియు అవకాశవాద వ్యాధుల నుంచి రక్షిస్తుంది.",
+      en: "make your crops resilient against pests and diseases by thickening cell walls and improving fruit forming capacity for better quality. ",
+      te: "పవర్ స్టార్ పంటలను పురుగులు మరియు రోగాలు తట్టుకునేలా చేస్తుంది మరియు పండ్లు ఏర్పడే సామర్థ్యాన్ని పెంచుతుంది.",
       hi: "फसलों को तनाव और अवसरवादी रोगों से बचाता है।",
     },
     {
@@ -312,20 +422,42 @@ export const products: Product[] = [
       te: ["వ్యాధి రక్షణ", "క్షేత్ర సహనం", "తక్కువ ఫైటోటాక్సిసిటీ"],
       hi: ["रोग सुरक्षा", "खेत लचीलापन", "कम फाइटोटॉक्सिसिटी"],
     },
+        true,
+    {
+      composition: {
+        en: ["12% Humic Acid", "Drip Special", "Improves Soil", "Better Root Growth"],
+        te: ["12% హ్యూమిక్ యాసిడ్", "డ్రిప్ స్పెషల్", "నేల ఆరోగ్యం", "వేర్ల వృద్ధి"],
+        hi: ["12% ह्यूमिक एसिड", "ड्रिप स्पेशल", "मिट्टी स्वास्थ्य", "बेहतर जड़ वृद्धि"],
+      },
+      specifications: {
+        en: [
+          { label: "Form", value: "Liquid" },
+          { label: "Packaging", value: "1 liter bottle" },
+        ],
+        te: [
+          { label: "రూపం", value: "ద్రవం" },
+          { label: "ప్యాకేజింగ్", value: "5kg" },
+        ],
+        hi: [
+          { label: "प्रकार", value: "तरल" },
+          { label: "पैकेजिंग", value: "1 लीटर बोतल" },
+        ],
+      },
+    },
   ),
   buildProduct(
-    "micro-plus",
-    "micro-plus",
+    "no1",
+    "no1",
     "Micronutrients",
-    "/products/nexus.png",
+    "/products/no1.png",
     {
-      en: "Micro Plus",
-      te: "మైక్రో ప్లస్",
+      en: "NO.1",
+      te: "నంబర్ 1",
       hi: "माइक्रो प्लस",
     },
     {
-      en: "Delivers essential micronutrients for balanced growth.",
-      te: "సమతుల్య వృద్ధికి అవసరమైన సూక్ష్మ పోషకాలను అందిస్తుంది.",
+      en: "No. 1 make your crops grow healthy through unique bio-rational solutions that improve photosynthesis and resist shedding of flowers to boost production.",
+      te: "నంబర్ 1 ప్రత్యేకమైన బయో రేషనల్ సొల్యూషన్ ద్వారా పంటలను ఆరోగ్యంగా పెంచుతుంది, ఇది కిరణజన్య సంయోగక్రియను మెరుగుపరుస్తుంది.",
       hi: "संतुलित वृद्धि के लिए आवश्यक सूक्ष्म पोषक तत्व प्रदान करता है।",
     },
     {
@@ -343,20 +475,42 @@ export const products: Product[] = [
       te: ["లోపాలను సరిచేస్తుంది", "నాణ్యతను మెరుగుపరుస్తుంది", "వృద్ధిని సరిదిద్దుతుంది"],
       hi: ["कमियों को दूर करता है", "गुणवत्ता में सुधार", "वृद्धि को ठीक करता है"],
     },
+        true,
+    {
+      composition: {
+        en: ["12% Humic Acid", "Drip Special", "Improves Soil", "Better Root Growth"],
+        te: ["12% హ్యూమిక్ యాసిడ్", "డ్రిప్ స్పెషల్", "నేల ఆరోగ్యం", "వేర్ల వృద్ధి"],
+        hi: ["12% ह्यूमिक एसिड", "ड्रिप स्पेशल", "मिट्टी स्वास्थ्य", "बेहतर जड़ वृद्धि"],
+      },
+      specifications: {
+        en: [
+          { label: "Form", value: "Liquid" },
+          { label: "Packaging", value: "1 liter bottle" },
+        ],
+        te: [
+          { label: "రూపం", value: "ద్రవం" },
+          { label: "ప్యాకేజింగ్", value: "5kg" },
+        ],
+        hi: [
+          { label: "प्रकार", value: "तरल" },
+          { label: "पैकेजिंग", value: "1 लीटर बोतल" },
+        ],
+      },
+    },
   ),
   buildProduct(
-    "plant-boost",
-    "plant-boost",
+    "polis",
+    "polis",
     "Biostimulant",
-    "/products/idea.png",
+    "/products/polis.png",
     {
-      en: "Plant Boost",
-      te: "ప్లాంట్ బూస్ట్",
+      en: "POLIS",
+      te: "పోలిస్",
       hi: "प्लांट बूस्ट",
     },
     {
-      en: "Improves plant metabolism and stress tolerance.",
-      te: "మొక్క జీవక్రియ మరియు ప్రతికూల పరిస్థితులకు తట్టుకునే శక్తిని మెరుగుపరుస్తుంది.",
+      en: "Polis make your crops qualitative by acting as a flowering stimulant and yield booster that enhances the plant canopy and induces profuse flowering.",
+      te: "పోలిస్ పంటల నాణ్యతను పెంచడానికి, ప్రవాహ ప్రేరకంగా మరియు దిగుబడిని పెంచేదిగా పనిచేస్తుంది.",
       hi: "पौधे की चयापचय और तनाव सहिष्णुता में सुधार करता है।",
     },
     {
@@ -374,20 +528,42 @@ export const products: Product[] = [
       te: ["మెరుగైన జీవక్రియా", "మెరుగైన పూలు", "ఎక్కువ సహనం"],
       hi: ["बेहतर चयापचय", "बेहतर फूलना", "उच्च लचीलापन"],
     },
+        true,
+    {
+      composition: {
+        en: ["12% Humic Acid", "Drip Special", "Improves Soil", "Better Root Growth"],
+        te: ["12% హ్యూమిక్ యాసిడ్", "డ్రిప్ స్పెషల్", "నేల ఆరోగ్యం", "వేర్ల వృద్ధి"],
+        hi: ["12% ह्यूमिक एसिड", "ड्रिप स्पेशल", "मिट्टी स्वास्थ्य", "बेहतर जड़ वृद्धि"],
+      },
+      specifications: {
+        en: [
+          { label: "Form", value: "Liquid" },
+          { label: "Packaging", value: "1 liter bottle" },
+        ],
+        te: [
+          { label: "రూపం", value: "ద్రవం" },
+          { label: "ప్యాకేజింగ్", value: "5kg" },
+        ],
+        hi: [
+          { label: "प्रकार", value: "तरल" },
+          { label: "पैकेजिंग", value: "1 लीटर बोतल" },
+        ],
+      },
+    },
   ),
   buildProduct(
-    "yield-max",
-    "yield-max",
+    "moove",
+    "moove",
     "Yield Booster",
-    "/products/rafel.png",
+    "/products/moove.png",
     {
-      en: "Yield Max",
-      te: "యీల్డ్ మాక్స్",
+      en: "MOOVE",
+      te: "మూవే",
       hi: "यील्ड मैक्स",
     },
     {
-      en: "Increases yield potential with targeted nutrient delivery.",
-      te: "లక్ష్యిత పోషక సరఫరాతో దిగుబడి సంభావ్యతను పెంచుతుంది.",
+      en: "Moove Increases yield potential with targeted nutrient delivery.",
+      te: "మూవే బయోటెక్నాలజీని ఉపయోగించి, పంటలను క్యాటర్పిల్లర్లు (గొంగళి పురుగులు) వంటి చాలా మొండి పురుగుల నుండి రక్షిస్తుంది.",
       hi: "लक्षित पोषक वितरण के साथ उपज क्षमता बढ़ाता है।",
     },
     {
@@ -405,20 +581,42 @@ export const products: Product[] = [
       te: ["ఎక్కువ దిగుబడి", "మెరుగైన నాణ్యత", "సమర్థవంతమైన ఉపయోగం"],
       hi: ["उच्च उपज", "बेहतर गुणवत्ता", "कुशल उपयोग"],
     },
+        true,
+    {
+      composition: {
+        en: ["12% Humic Acid", "Drip Special", "Improves Soil", "Better Root Growth"],
+        te: ["12% హ్యూమిక్ యాసిడ్", "డ్రిప్ స్పెషల్", "నేల ఆరోగ్యం", "వేర్ల వృద్ధి"],
+        hi: ["12% ह्यूमिक एसिड", "ड्रिप स्पेशल", "मिट्टी स्वास्थ्य", "बेहतर जड़ वृद्धि"],
+      },
+      specifications: {
+        en: [
+          { label: "Form", value: "Liquid" },
+          { label: "Packaging", value: "1 liter bottle" },
+        ],
+        te: [
+          { label: "రూపం", value: "ద్రవం" },
+          { label: "ప్యాకేజింగ్", value: "5kg" },
+        ],
+        hi: [
+          { label: "प्रकार", value: "तरल" },
+          { label: "पैकेजिंग", value: "1 लीटर बोतल" },
+        ],
+      },
+    },
   ),
   buildProduct(
-    "nano-zinc",
-    "nano-zinc",
+    "quasko",
+    "quasko",
     "Micronutrients",
-    "/products/war.png",
+    "/products/qasko.png",
     {
-      en: "Nano Zinc",
-      te: "నానో జింక్",
+      en: "QASKO",
+      te: "క్వాస్కో",
       hi: "नैनो जिंक",
     },
     {
-      en: "Supports strong grain filling and healthy leaf development.",
-      te: "బలమైన ధాన్య పూరణ మరియు ఆరోగ్యకరమైన ఆకుల అభివృద్ధికి మద్దతు ఇస్తుంది.",
+      en: "Qasko make your crops free from fungal and bacterial pathogens like Powdery mildew and Leaf blight with protective and curative alkaloids.",
+      te: "క్వాస్కో మీ పంటను శిలీంధ్ర మరియు బాక్టీరియల్ వ్యాధుల నుండి రక్షిస్తుంది, ఉదాహరణకు పోడరీ మిల్డ్యూ మరియు లీఫ్ బ్లైట్ వంటివి.",
       hi: "मजबूत दाना भराव और स्वस्थ पत्तियों के विकास का समर्थन करता है।",
     },
     {
@@ -436,21 +634,41 @@ export const products: Product[] = [
       te: ["వేగవంతమైన పోషక సవరణ", "మెరుగైన ధాన్య పూరణ", "బలమైన ఆకులు"],
       hi: ["तेज़ पोषक सुधार", "बेहतर दाना भराव", "मजबूत पत्तियाँ"],
     },
-    false,
-  ),
-  buildProduct(
-    "citrus-fuel",
-    "citrus-fuel",
-    "Foliar",
-    "/products/expert.png",
+    true,
     {
-      en: "Citrus Fuel",
-      te: "సిట్రస్ ఫ్యూల్",
-      hi: "सिटरस फ्यूल",
+      composition: {
+        en: ["12% Humic Acid", "Drip Special", "Improves Soil", "Better Root Growth"],
+        te: ["12% హ్యూమిక్ యాసిడ్", "డ్రిప్ స్పెషల్", "నేల ఆరోగ్యం", "వేర్ల వృద్ధి"],
+        hi: ["12% ह्यूमिक एसिड", "ड्रिप स्पेशल", "मिट्टी स्वास्थ्य", "बेहतर जड़ वृद्धि"],
+      },
+      specifications: {
+        en: [
+          { label: "Form", value: "Liquid" },
+          { label: "Packaging", value: "1 liter bottle" },
+        ],
+        te: [
+          { label: "రూపం", value: "ద్రవం" },
+          { label: "ప్యాకేజింగ్", value: "5kg" },
+        ],
+        hi: [
+          { label: "प्रकार", value: "तरल" },
+          { label: "पैकेजिंग", value: "1 लीटर बोतल" },
+        ],
+      },
+    },  ),
+  buildProduct(
+    "war",
+    "war",
+    "Foliar",
+    "/products/war.png",
+    {
+      en: "WAR",
+      te: "వార్",
+      hi: "वार",
     },
     {
-      en: "Promotes fruit size and better color in orchards.",
-      te: "పండ్ల తోటల్లో పండు పరిమాణం మరియు మెరుగైన రంగును ప్రోత్సహిస్తుంది.",
+      en: " War make your crops grow vigorously while developing strong resistance against a number of pests and diseases through alkaloid-based formulations.",
+      te: "వార్  పంట పెరుగుదలను బలంగా పెంచుతుంది మరియు అదే సమయంలో పురుగులు, వ్యాధుల నుండి బలమైన రక్షణను కల్పిస్తుంది.",
       hi: "बगीचों में फल के आकार और बेहतर रंग को बढ़ावा देता है।",
     },
     {
@@ -469,20 +687,42 @@ export const products: Product[] = [
       hi: ["बड़े फल", "बेहतर त्वचा रंग", "बेहतर शेल्फ लाइफ"],
     },
     false,
+    
+    {
+      composition: {
+        en: ["12% Humic Acid", "Drip Special", "Improves Soil", "Better Root Growth"],
+        te: ["12% హ్యూమిక్ యాసిడ్", "డ్రిప్ స్పెషల్", "నేల ఆరోగ్యం", "వేర్ల వృద్ధి"],
+        hi: ["12% ह्यूमिक एसिड", "ड्रिप स्पेशल", "मिट्टी स्वास्थ्य", "बेहतर जड़ वृद्धि"],
+      },
+      specifications: {
+        en: [
+          { label: "Form", value: "Liquid" },
+          { label: "Packaging", value: "1 liter bottle" },
+        ],
+        te: [
+          { label: "రూపం", value: "ద్రవం" },
+          { label: "ప్యాకేజింగ్", value: "5kg" },
+        ],
+        hi: [
+          { label: "प्रकार", value: "तरल" },
+          { label: "पैकेजिंग", value: "1 लीटर बोतल" },
+        ],
+      },
+    },
   ),
   buildProduct(
-    "water-balance",
-    "water-balance",
+    "lion",
+    "lion",
     "Water Care",
-    "/products/demand.png",
+    "/products/lion.png",
     {
-      en: "Water Balance",
-      te: "వాటర్ బ్యాలన్స్",
+      en: "LION",
+      te: "లయన్",
       hi: "वाटर बैलेंस",
     },
     {
-      en: "Helps crops handle water stress during dry spells.",
-      te: "పొడుగుపాటు కాలంలో నీటి ఒత్తిడిని తట్టుకోడానికి సహాయపడుతుంది.",
+      en: "Lion make your crops develop resistance against various pests and diseases while supporting healthy plant growth with specialized alkaloid-based solutions.",
+      te: "లయన్ వివిధ రకాల పురుగులు మరియు వ్యాధుల నుండి పంటలకు రక్షణ కల్పిస్తుంది మరియు ఆరోగ్యకరమైన పెరుగుదలకు మద్దతు ఇస్తుంది.",
       hi: "सूखे के दौर में फसलों को पानी के तनाव से निपटने में मदद करता है।",
     },
     {
@@ -503,18 +743,18 @@ export const products: Product[] = [
     false,
   ),
   buildProduct(
-    "blast-protect",
-    "blast-protect",
+    "sarkar",
+    "sarkar",
     "Protection",
-    "/products/allrightGR.png",
+    "/products/sarkar.png",
     {
-      en: "Blast Protect",
-      te: "బ్లాస్ట్ ప్రొటెక్ట్",
+      en: "SARKAR",
+      te: "సర్కార్",
       hi: "ब्लास्ट प्रोटेक्ट",
     },
     {
-      en: "Provides strong defense during sudden disease outbreaks.",
-      te: "హఠాత్తుగా వ్యాధి வெடிப்பుల సమయంలో బలమైన రక్షణ ఇస్తుంది.",
+      en: "Sarkar make your crops resilient against a number of pests and diseases while supporting vigorous growth through specialized alkaloid-based support..",
+      te: "సర్కార్ మీ పంటను రకరకాల పురుగులు మరియు వ్యాధుల నుండి రక్షణ కల్పిస్తూనే, బలంగా పెరగడానికి మద్దతు ఇస్తుంది.",
       hi: "अचानक रोग outbreaks के दौरान मजबूत बचाव प्रदान करता है।",
     },
     {
@@ -532,21 +772,42 @@ export const products: Product[] = [
       te: ["వేగవంతమైన రక్షణ", "తగ్గిన సంక్రమణ", "క్షేత్ర స్థిరత్వం"],
       hi: ["तेज़ सुरक्षा", "कम संक्रमण", "खेत स्थिरता"],
     },
-    false,
+    false, 
+    {
+      composition: {
+        en: ["12% Humic Acid", "Drip Special", "Improves Soil", "Better Root Growth"],
+        te: ["12% హ్యూమిక్ యాసిడ్", "డ్రిప్ స్పెషల్", "నేల ఆరోగ్యం", "వేర్ల వృద్ధి"],
+        hi: ["12% ह्यूमिक एसिड", "ड्रिप स्पेशल", "मिट्टी स्वास्थ्य", "बेहतर जड़ वृद्धि"],
+      },
+      specifications: {
+        en: [
+          { label: "Form", value: "Liquid" },
+          { label: "Packaging", value: "1 liter bottle" },
+        ],
+        te: [
+          { label: "రూపం", value: "ద్రవం" },
+          { label: "ప్యాకేజింగ్", value: "5kg" },
+        ],
+        hi: [
+          { label: "प्रकार", value: "तरल" },
+          { label: "पैकेजिंग", value: "1 लीटर बोतल" },
+        ],
+      },
+    },
   ),
   buildProduct(
-    "silo-boost",
-    "silo-boost",
+    "sky",
+    "sky",
     "Soil Health",
-    "/products/ara.png",
+    "/products/sky.png",
     {
-      en: "Silo Boost",
-      te: "సిలో బూస్ట్",
+      en: "SKY",
+      te: "స్కై",
       hi: "सिलो बूस्ट",
     },
     {
-      en: "Improves soil organic matter and beneficial biology.",
-      te: "మట్టిలో సేంద్రీయ పదార్థం మరియు ప్రయోజనకరమైన జీవసంబంధాన్ని మెరుగుపరుస్తుంది.",
+      en: "Sky make your crops healthy and vigorous by using specialized herbs that help develop resistance against pests while promoting plant growth.",
+      te: "స్కై ప్రత్యేకమైన మూలికలను ఉపయోగించి పంటను ఆరోగ్యంగా మరియు బలంగా చేస్తుంది, ఇవి రక్షణ శక్తిని అభివృద్ధి చేయడంలో సహాయపడతాయి.",
       hi: "मिट्टी में कार्बनिक पदार्थ और लाभकारी जैविकी में सुधार करता है।",
     },
     {
@@ -565,12 +826,33 @@ export const products: Product[] = [
       hi: ["अधिक जैविक पदार्थ", "स्वस्थ मिट्टी", "मजबूत वृद्धि"],
     },
     false,
+    {
+      composition: {
+        en: ["12% Humic Acid", "Drip Special", "Improves Soil", "Better Root Growth"],
+        te: ["12% హ్యూమిక్ యాసిడ్", "డ్రిప్ స్పెషల్", "నేల ఆరోగ్యం", "వేర్ల వృద్ధి"],
+        hi: ["12% ह्यूमिक एसिड", "ड्रिप स्पेशल", "मिट्टी स्वास्थ्य", "बेहतर जड़ वृद्धि"],
+      },
+      specifications: {
+        en: [
+          { label: "Form", value: "Liquid" },
+          { label: "Packaging", value: "1 liter bottle" },
+        ],
+        te: [
+          { label: "రూపం", value: "ద్రవం" },
+          { label: "ప్యాకేజింగ్", value: "5kg" },
+        ],
+        hi: [
+          { label: "प्रकार", value: "तरल" },
+          { label: "पैकेजिंग", value: "1 लीटर बोतल" },
+        ],
+      },
+    },
   ),
   buildProduct(
-    "green-mix",
-    "green-mix",
+    "allright",
+    "allright",
     "Nutrition",
-    "/products/kingkong.png",
+    "/products/allright.png",
     {
       en: "Green Mix",
       te: "గ్రీన్ మిక్స్",
@@ -597,20 +879,41 @@ export const products: Product[] = [
       hi: ["संतुलित पोषण", "शाकीय वृद्धि", "स्वस्थ रंग"],
     },
     false,
+    {
+      composition: {
+        en: ["12% Humic Acid", "Drip Special", "Improves Soil", "Better Root Growth"],
+        te: ["12% హ్యూమిక్ యాసిడ్", "డ్రిప్ స్పెషల్", "నేల ఆరోగ్యం", "వేర్ల వృద్ధి"],
+        hi: ["12% ह्यूमिक एसिड", "ड्रिप स्पेशल", "मिट्टी स्वास्थ्य", "बेहतर जड़ वृद्धि"],
+      },
+      specifications: {
+        en: [
+          { label: "Form", value: "Liquid" },
+          { label: "Packaging", value: "1 liter bottle" },
+        ],
+        te: [
+          { label: "రూపం", value: "ద్రవం" },
+          { label: "ప్యాకేజింగ్", value: "5kg" },
+        ],
+        hi: [
+          { label: "प्रकार", value: "तरल" },
+          { label: "पैकेजिंग", value: "1 लीटर बोतल" },
+        ],
+      },
+    },
   ),
   buildProduct(
-    "root-nourish",
-    "root-nourish",
+    "ara",
+    "ara",
     "Root Care",
-    "/products/kohinoor.png",
+    "/products/ara.png",
     {
-      en: "Root Nourish",
-      te: "రూట్ నూరిష్",
-      hi: "रूट नॉरिश",
+      en: "Kohinoor",
+      te: "కోహినూర్",
+      hi: "कोहिनूर",
     },
     {
       en: "Strengthens early root development and nutrient uptake.",
-      te: "ప్రారంభ మూలాభివృద్ధి మరియు పోషక గ్రహణశక్తిని బలోపేతం చేస్తుంది.",
+      te: "కోహినూర్ ఒత్తిడి మరియు కరువును తట్టుకోవడం ద్వారా పూత రాలడాన్ని తగ్గిస్తుంది.",
       hi: "प्रारंभिक जड़ विकास और पोषक अवशोषण को मजबूत करता है।",
     },
     {
@@ -619,7 +922,7 @@ export const products: Product[] = [
       hi: "नवोदित पौधों और रोपाई स्थापना के लिए डिज़ाइन किया गया।",
     },
     {
-      en: "Apply 600ml per acre after transplanting.",
+      en: "5Kg per acre (Below 20-30 days after translating).",
       te: "నర్సరీ తర్వాత ఒక ఎకరానికి 600ml వర్తించండి.",
       hi: "रोपाई के बाद प्रति एकड़ 600ml लागू करें।",
     },
@@ -629,12 +932,33 @@ export const products: Product[] = [
       hi: ["बेहतर जड़ें", "अधिक अस्तित्व", "स्वस्थ स्थापना"],
     },
     false,
+    {
+      composition: {
+        en: ["12% Humic Acid", "Drip Special", "Improves Soil", "Better Root Growth"],
+        te: ["12% హ్యూమిక్ యాసిడ్", "డ్రిప్ స్పెషల్", "నేల ఆరోగ్యం", "వేర్ల వృద్ధి"],
+        hi: ["12% ह्यूमिक एसिड", "ड्रिप स्पेशल", "मिट्टी स्वास्थ्य", "बेहतर जड़ वृद्धि"],
+      },
+      specifications: {
+        en: [
+          { label: "Form", value: "Liquid" },
+          { label: "Packaging", value: "1 liter bottle" },
+        ],
+        te: [
+          { label: "రూపం", value: "ద్రవం" },
+          { label: "ప్యాకేజింగ్", value: "5kg" },
+        ],
+        hi: [
+          { label: "प्रकार", value: "तरल" },
+          { label: "पैकेजिंग", value: "1 लीटर बोतल" },
+        ],
+      },
+    },
   ),
   buildProduct(
-    "bio-fix",
-    "bio-fix",
+    "demand",
+    "demand",
     "Biostimulant",
-    "/products/magic.png",
+    "/products/demand.png",
     {
       en: "Bio Fix",
       te: "బయో ఫిక్స్",
@@ -661,12 +985,33 @@ export const products: Product[] = [
       hi: ["तेज़ रिकवरी", "बेहतर लचीलापन", "स्वस्थ छत्र"],
     },
     false,
+    {
+      composition: {
+        en: ["12% Humic Acid", "Drip Special", "Improves Soil", "Better Root Growth"],
+        te: ["12% హ్యూమిక్ యాసిడ్", "డ్రిప్ స్పెషల్", "నేల ఆరోగ్యం", "వేర్ల వృద్ధి"],
+        hi: ["12% ह्यूमिक एसिड", "ड्रिप स्पेशल", "मिट्टी स्वास्थ्य", "बेहतर जड़ वृद्धि"],
+      },
+      specifications: {
+        en: [
+          { label: "Form", value: "Liquid" },
+          { label: "Packaging", value: "1 liter bottle" },
+        ],
+        te: [
+          { label: "రూపం", value: "ద్రవం" },
+          { label: "ప్యాకేజింగ్", value: "5kg" },
+        ],
+        hi: [
+          { label: "प्रकार", value: "तरल" },
+          { label: "पैकेजिंग", value: "1 लीटर बोतल" },
+        ],
+      },
+    },
   ),
   buildProduct(
-    "harvest-max",
-    "harvest-max",
+    "expert",
+    "expert",
     "Yield Booster",
-    "/products/marq999.png",
+    "/products/expert.png",
     {
       en: "Harvest Max",
       te: "హార్వెస్ట్ మాక్స్",
@@ -693,12 +1038,33 @@ export const products: Product[] = [
       hi: ["उच्च कटाई", "बेहतर गुणवत्ता", "विश्वसनीय उत्पादन"],
     },
     false,
+    {
+      composition: {
+        en: ["12% Humic Acid", "Drip Special", "Improves Soil", "Better Root Growth"],
+        te: ["12% హ్యూమిక్ యాసిడ్", "డ్రిప్ స్పెషల్", "నేల ఆరోగ్యం", "వేర్ల వృద్ధి"],
+        hi: ["12% ह्यूमिक एसिड", "ड्रिप स्पेशल", "मिट्टी स्वास्थ्य", "बेहतर जड़ वृद्धि"],
+      },
+      specifications: {
+        en: [
+          { label: "Form", value: "Liquid" },
+          { label: "Packaging", value: "1 liter bottle" },
+        ],
+        te: [
+          { label: "రూపం", value: "ద్రవం" },
+          { label: "ప్యాకేజింగ్", value: "5kg" },
+        ],
+        hi: [
+          { label: "प्रकार", value: "तरल" },
+          { label: "पैकेजिंग", value: "1 लीटर बोतल" },
+        ],
+      },
+    },
   ),
   buildProduct(
-    "nutri-gold",
-    "nutri-gold",
+    "hycross",
+    "hycross",
     "Nutrition",
-    "/products/moove.png",
+    "/products/hycross.png",
     {
       en: "Nutri Gold",
       te: "న్యూట్రి గోల్డ్",
@@ -725,5 +1091,503 @@ export const products: Product[] = [
       hi: ["संतुलित पोषण", "कुशल अवशोषण", "प्रीमियम गुणवत्ता"],
     },
     false,
+    {
+      composition: {
+        en: ["12% Humic Acid", "Drip Special", "Improves Soil", "Better Root Growth"],
+        te: ["12% హ్యూమిక్ యాసిడ్", "డ్రిప్ స్పెషల్", "నేల ఆరోగ్యం", "వేర్ల వృద్ధి"],
+        hi: ["12% ह्यूमिक एसिड", "ड्रिप स्पेशल", "मिट्टी स्वास्थ्य", "बेहतर जड़ वृद्धि"],
+      },
+      specifications: {
+        en: [
+          { label: "Form", value: "Liquid" },
+          { label: "Packaging", value: "1 liter bottle" },
+        ],
+        te: [
+          { label: "రూపం", value: "ద్రవం" },
+          { label: "ప్యాకేజింగ్", value: "5kg" },
+        ],
+        hi: [
+          { label: "प्रकार", value: "तरल" },
+          { label: "पैकेजिंग", value: "1 लीटर बोतल" },
+        ],
+      },
+    },
+  ),
+  buildProduct(
+    "idea",
+    "idea",
+    "Nutrition",
+    "/products/idea.png",
+    {
+      en: "Nutri Gold",
+      te: "న్యూట్రి గోల్డ్",
+      hi: "न्यूट्री गोल्ड",
+    },
+    {
+      en: "Supports strong growth in high-demand crop cycles.",
+      te: "అధిక డిమాండ్ గల పంట చక్రాల్లో బలమైన వృద్ధికి మద్దతు ఇస్తుంది.",
+      hi: "उच्च मांग वाली फसल चक्रों में मजबूत वृद्धि का समर्थन करता है।",
+    },
+    {
+      en: "A premium nutrient blend for modern farm management.",
+      te: "ఆధునిక వ్యవసాయ నిర్వహణకు ప్రీమియం పోషక మిశ్రమం.",
+      hi: "आधुनिक कृषि प्रबंधन के लिए एक प्रीमियम पोषक मिश्रण।",
+    },
+    {
+      en: "Apply 2 liters per acre during the active season.",
+      te: "సక్రియ సీజన్లో ఒక ఎకరానికి 2 లీటర్లు వర్తించండి.",
+      hi: "सक्रिय मौसम में प्रति एकड़ 2 लीटर लागू करें।",
+    },
+    {
+      en: ["Balanced nutrition", "Efficient uptake", "Premium quality"],
+      te: ["సమతుల్య పోషణ", "సమర్థవంతమైన గ్రహణం", "ప్రీమియం నాణ్యత"],
+      hi: ["संतुलित पोषण", "कुशल अवशोषण", "प्रीमियम गुणवत्ता"],
+    },
+    false,
+    {
+      composition: {
+        en: ["12% Humic Acid", "Drip Special", "Improves Soil", "Better Root Growth"],
+        te: ["12% హ్యూమిక్ యాసిడ్", "డ్రిప్ స్పెషల్", "నేల ఆరోగ్యం", "వేర్ల వృద్ధి"],
+        hi: ["12% ह्यूमिक एसिड", "ड्रिप स्पेशल", "मिट्टी स्वास्थ्य", "बेहतर जड़ वृद्धि"],
+      },
+      specifications: {
+        en: [
+          { label: "Form", value: "Liquid" },
+          { label: "Packaging", value: "1 liter bottle" },
+        ],
+        te: [
+          { label: "రూపం", value: "ద్రవం" },
+          { label: "ప్యాకేజింగ్", value: "5kg" },
+        ],
+        hi: [
+          { label: "प्रकार", value: "तरल" },
+          { label: "पैकेजिंग", value: "1 लीटर बोतल" },
+        ],
+      },
+    },
+  ),
+  buildProduct(
+    "kingkong",
+    "kingkong",
+    "Nutrition",
+    "/products/kingkong.png",
+    {
+      en: "Nutri Gold",
+      te: "న్యూట్రి గోల్డ్",
+      hi: "न्यूट्री गोल्ड",
+    },
+    {
+      en: "Supports strong growth in high-demand crop cycles.",
+      te: "అధిక డిమాండ్ గల పంట చక్రాల్లో బలమైన వృద్ధికి మద్దతు ఇస్తుంది.",
+      hi: "उच्च मांग वाली फसल चक्रों में मजबूत वृद्धि का समर्थन करता है।",
+    },
+    {
+      en: "A premium nutrient blend for modern farm management.",
+      te: "ఆధునిక వ్యవసాయ నిర్వహణకు ప్రీమియం పోషక మిశ్రమం.",
+      hi: "आधुनिक कृषि प्रबंधन के लिए एक प्रीमियम पोषक मिश्रण।",
+    },
+    {
+      en: "Apply 2 liters per acre during the active season.",
+      te: "సక్రియ సీజన్లో ఒక ఎకరానికి 2 లీటర్లు వర్తించండి.",
+      hi: "सक्रिय मौसम में प्रति एकड़ 2 लीटर लागू करें।",
+    },
+    {
+      en: ["Balanced nutrition", "Efficient uptake", "Premium quality"],
+      te: ["సమతుల్య పోషణ", "సమర్థవంతమైన గ్రహణం", "ప్రీమియం నాణ్యత"],
+      hi: ["संतुलित पोषण", "कुशल अवशोषण", "प्रीमियम गुणवत्ता"],
+    },
+    false,
+    {
+      composition: {
+        en: ["12% Humic Acid", "Drip Special", "Improves Soil", "Better Root Growth"],
+        te: ["12% హ్యూమిక్ యాసిడ్", "డ్రిప్ స్పెషల్", "నేల ఆరోగ్యం", "వేర్ల వృద్ధి"],
+        hi: ["12% ह्यूमिक एसिड", "ड्रिप स्पेशल", "मिट्टी स्वास्थ्य", "बेहतर जड़ वृद्धि"],
+      },
+      specifications: {
+        en: [
+          { label: "Form", value: "Liquid" },
+          { label: "Packaging", value: "1 liter bottle" },
+        ],
+        te: [
+          { label: "రూపం", value: "ద్రవం" },
+          { label: "ప్యాకేజింగ్", value: "5kg" },
+        ],
+        hi: [
+          { label: "प्रकार", value: "तरल" },
+          { label: "पैकेजिंग", value: "1 लीटर बोतल" },
+        ],
+      },
+    },
+  ),
+  buildProduct(
+    "magic",
+    "magic",
+    "Nutrition",
+    "/products/magic.png",
+    {
+      en: "Nutri Gold",
+      te: "న్యూట్రి గోల్డ్",
+      hi: "न्यूट्री गोल्ड",
+    },
+    {
+      en: "Supports strong growth in high-demand crop cycles.",
+      te: "అధిక డిమాండ్ గల పంట చక్రాల్లో బలమైన వృద్ధికి మద్దతు ఇస్తుంది.",
+      hi: "उच्च मांग वाली फसल चक्रों में मजबूत वृद्धि का समर्थन करता है।",
+    },
+    {
+      en: "A premium nutrient blend for modern farm management.",
+      te: "ఆధునిక వ్యవసాయ నిర్వహణకు ప్రీమియం పోషక మిశ్రమం.",
+      hi: "आधुनिक कृषि प्रबंधन के लिए एक प्रीमियम पोषक मिश्रण।",
+    },
+    {
+      en: "Apply 2 liters per acre during the active season.",
+      te: "సక్రియ సీజన్లో ఒక ఎకరానికి 2 లీటర్లు వర్తించండి.",
+      hi: "सक्रिय मौसम में प्रति एकड़ 2 लीटर लागू करें।",
+    },
+    {
+      en: ["Balanced nutrition", "Efficient uptake", "Premium quality"],
+      te: ["సమతుల్య పోషణ", "సమర్థవంతమైన గ్రహణం", "ప్రీమియం నాణ్యత"],
+      hi: ["संतुलित पोषण", "कुशल अवशोषण", "प्रीमियम गुणवत्ता"],
+    },
+    false,
+    {
+      composition: {
+        en: ["12% Humic Acid", "Drip Special", "Improves Soil", "Better Root Growth"],
+        te: ["12% హ్యూమిక్ యాసిడ్", "డ్రిప్ స్పెషల్", "నేల ఆరోగ్యం", "వేర్ల వృద్ధి"],
+        hi: ["12% ह्यूमिक एसिड", "ड्रिप स्पेशल", "मिट्टी स्वास्थ्य", "बेहतर जड़ वृद्धि"],
+      },
+      specifications: {
+        en: [
+          { label: "Form", value: "Liquid" },
+          { label: "Packaging", value: "1 liter bottle" },
+        ],
+        te: [
+          { label: "రూపం", value: "ద్రవం" },
+          { label: "ప్యాకేజింగ్", value: "5kg" },
+        ],
+        hi: [
+          { label: "प्रकार", value: "तरल" },
+          { label: "पैकेजिंग", value: "1 लीटर बोतल" },
+        ],
+      },
+    },
+  ),
+  buildProduct(
+    "nexus",
+    "nexus",
+    "Nutrition",
+    "/products/nexus.png",
+    {
+      en: "Nutri Gold",
+      te: "న్యూట్రి గోల్డ్",
+      hi: "न्यूट्री गोल्ड",
+    },
+    {
+      en: "Supports strong growth in high-demand crop cycles.",
+      te: "అధిక డిమాండ్ గల పంట చక్రాల్లో బలమైన వృద్ధికి మద్దతు ఇస్తుంది.",
+      hi: "उच्च मांग वाली फसल चक्रों में मजबूत वृद्धि का समर्थन करता है।",
+    },
+    {
+      en: "A premium nutrient blend for modern farm management.",
+      te: "ఆధునిక వ్యవసాయ నిర్వహణకు ప్రీమియం పోషక మిశ్రమం.",
+      hi: "आधुनिक कृषि प्रबंधन के लिए एक प्रीमियम पोषक मिश्रण।",
+    },
+    {
+      en: "Apply 2 liters per acre during the active season.",
+      te: "సక్రియ సీజన్లో ఒక ఎకరానికి 2 లీటర్లు వర్తించండి.",
+      hi: "सक्रिय मौसम में प्रति एकड़ 2 लीटर लागू करें।",
+    },
+    {
+      en: ["Balanced nutrition", "Efficient uptake", "Premium quality"],
+      te: ["సమతుల్య పోషణ", "సమర్థవంతమైన గ్రహణం", "ప్రీమియం నాణ్యత"],
+      hi: ["संतुलित पोषण", "कुशल अवशोषण", "प्रीमियम गुणवत्ता"],
+    },
+    false,
+    {
+      composition: {
+        en: ["12% Humic Acid", "Drip Special", "Improves Soil", "Better Root Growth"],
+        te: ["12% హ్యూమిక్ యాసిడ్", "డ్రిప్ స్పెషల్", "నేల ఆరోగ్యం", "వేర్ల వృద్ధి"],
+        hi: ["12% ह्यूमिक एसिड", "ड्रिप स्पेशल", "मिट्टी स्वास्थ्य", "बेहतर जड़ वृद्धि"],
+      },
+      specifications: {
+        en: [
+          { label: "Form", value: "Liquid" },
+          { label: "Packaging", value: "1 liter bottle" },
+        ],
+        te: [
+          { label: "రూపం", value: "ద్రవం" },
+          { label: "ప్యాకేజింగ్", value: "5kg" },
+        ],
+        hi: [
+          { label: "प्रकार", value: "तरल" },
+          { label: "पैकेजिंग", value: "1 लीटर बोतल" },
+        ],
+      },
+    },
+  ),
+  buildProduct(
+    "quantum",
+    "quantum",
+    "Nutrition",
+    "/products/quantum.png",
+    {
+      en: "Nutri Gold",
+      te: "న్యూట్రి గోల్డ్",
+      hi: "न्यूट्री गोल्ड",
+    },
+    {
+      en: "Supports strong growth in high-demand crop cycles.",
+      te: "అధిక డిమాండ్ గల పంట చక్రాల్లో బలమైన వృద్ధికి మద్దతు ఇస్తుంది.",
+      hi: "उच्च मांग वाली फसल चक्रों में मजबूत वृद्धि का समर्थन करता है।",
+    },
+    {
+      en: "A premium nutrient blend for modern farm management.",
+      te: "ఆధునిక వ్యవసాయ నిర్వహణకు ప్రీమియం పోషక మిశ్రమం.",
+      hi: "आधुनिक कृषि प्रबंधन के लिए एक प्रीमियम पोषक मिश्रण।",
+    },
+    {
+      en: "Apply 2 liters per acre during the active season.",
+      te: "సక్రియ సీజన్లో ఒక ఎకరానికి 2 లీటర్లు వర్తించండి.",
+      hi: "सक्रिय मौसम में प्रति एकड़ 2 लीटर लागू करें।",
+    },
+    {
+      en: ["Balanced nutrition", "Efficient uptake", "Premium quality"],
+      te: ["సమతుల్య పోషణ", "సమర్థవంతమైన గ్రహణం", "ప్రీమియం నాణ్యత"],
+      hi: ["संतुलित पोषण", "कुशल अवशोषण", "प्रीमियम गुणवत्ता"],
+    },
+    false,
+    {
+      composition: {
+        en: ["12% Humic Acid", "Drip Special", "Improves Soil", "Better Root Growth"],
+        te: ["12% హ్యూమిక్ యాసిడ్", "డ్రిప్ స్పెషల్", "నేల ఆరోగ్యం", "వేర్ల వృద్ధి"],
+        hi: ["12% ह्यूमिक एसिड", "ड्रिप स्पेशल", "मिट्टी स्वास्थ्य", "बेहतर जड़ वृद्धि"],
+      },
+      specifications: {
+        en: [
+          { label: "Form", value: "Liquid" },
+          { label: "Packaging", value: "1 liter bottle" },
+        ],
+        te: [
+          { label: "రూపం", value: "ద్రవం" },
+          { label: "ప్యాకేజింగ్", value: "5kg" },
+        ],
+        hi: [
+          { label: "प्रकार", value: "तरल" },
+          { label: "पैकेजिंग", value: "1 लीटर बोतल" },
+        ],
+      },
+    },
+  ),
+  buildProduct(
+    "rafel",
+    "rafel",
+    "Nutrition",
+    "/products/rafel.png",
+    {
+      en: "Nutri Gold",
+      te: "న్యూట్రి గోల్డ్",
+      hi: "न्यूट्री गोल्ड",
+    },
+    {
+      en: "Supports strong growth in high-demand crop cycles.",
+      te: "అధిక డిమాండ్ గల పంట చక్రాల్లో బలమైన వృద్ధికి మద్దతు ఇస్తుంది.",
+      hi: "उच्च मांग वाली फसल चक्रों में मजबूत वृद्धि का समर्थन करता है।",
+    },
+    {
+      en: "A premium nutrient blend for modern farm management.",
+      te: "ఆధునిక వ్యవసాయ నిర్వహణకు ప్రీమియం పోషక మిశ్రమం.",
+      hi: "आधुनिक कृषि प्रबंधन के लिए एक प्रीमियम पोषक मिश्रण।",
+    },
+    {
+      en: "Apply 2 liters per acre during the active season.",
+      te: "సక్రియ సీజన్లో ఒక ఎకరానికి 2 లీటర్లు వర్తించండి.",
+      hi: "सक्रिय मौसम में प्रति एकड़ 2 लीटर लागू करें।",
+    },
+    {
+      en: ["Balanced nutrition", "Efficient uptake", "Premium quality"],
+      te: ["సమతుల్య పోషణ", "సమర్థవంతమైన గ్రహణం", "ప్రీమియం నాణ్యత"],
+      hi: ["संतुलित पोषण", "कुशल अवशोषण", "प्रीमियम गुणवत्ता"],
+    },
+    false,
+    {
+      composition: {
+        en: ["12% Humic Acid", "Drip Special", "Improves Soil", "Better Root Growth"],
+        te: ["12% హ్యూమిక్ యాసిడ్", "డ్రిప్ స్పెషల్", "నేల ఆరోగ్యం", "వేర్ల వృద్ధి"],
+        hi: ["12% ह्यूमिक एसिड", "ड्रिप स्पेशल", "मिट्टी स्वास्थ्य", "बेहतर जड़ वृद्धि"],
+      },
+      specifications: {
+        en: [
+          { label: "Form", value: "Liquid" },
+          { label: "Packaging", value: "1 liter bottle" },
+        ],
+        te: [
+          { label: "రూపం", value: "ద్రవం" },
+          { label: "ప్యాకేజింగ్", value: "5kg" },
+        ],
+        hi: [
+          { label: "प्रकार", value: "तरल" },
+          { label: "पैकेजिंग", value: "1 लीटर बोतल" },
+        ],
+      },
+    },
+  ),
+  buildProduct(
+    "scart",
+    "scart",
+    "Nutrition",
+    "/products/scart.png",
+    {
+      en: "Nutri Gold",
+      te: "న్యూట్రి గోల్డ్",
+      hi: "न्यूट्री गोल्ड",
+    },
+    {
+      en: "Supports strong growth in high-demand crop cycles.",
+      te: "అధిక డిమాండ్ గల పంట చక్రాల్లో బలమైన వృద్ధికి మద్దతు ఇస్తుంది.",
+      hi: "उच्च मांग वाली फसल चक्रों में मजबूत वृद्धि का समर्थन करता है।",
+    },
+    {
+      en: "A premium nutrient blend for modern farm management.",
+      te: "ఆధునిక వ్యవసాయ నిర్వహణకు ప్రీమియం పోషక మిశ్రమం.",
+      hi: "आधुनिक कृषि प्रबंधन के लिए एक प्रीमियम पोषक मिश्रण।",
+    },
+    {
+      en: "Apply 2 liters per acre during the active season.",
+      te: "సక్రియ సీజన్లో ఒక ఎకరానికి 2 లీటర్లు వర్తించండి.",
+      hi: "सक्रिय मौसम में प्रति एकड़ 2 लीटर लागू करें।",
+    },
+    {
+      en: ["Balanced nutrition", "Efficient uptake", "Premium quality"],
+      te: ["సమతుల్య పోషణ", "సమర్థవంతమైన గ్రహణం", "ప్రీమియం నాణ్యత"],
+      hi: ["संतुलित पोषण", "कुशल अवशोषण", "प्रीमियम गुणवत्ता"],
+    },
+    false,
+    {
+      composition: {
+        en: ["12% Humic Acid", "Drip Special", "Improves Soil", "Better Root Growth"],
+        te: ["12% హ్యూమిక్ యాసిడ్", "డ్రిప్ స్పెషల్", "నేల ఆరోగ్యం", "వేర్ల వృద్ధి"],
+        hi: ["12% ह्यूमिक एसिड", "ड्रिप स्पेशल", "मिट्टी स्वास्थ्य", "बेहतर जड़ वृद्धि"],
+      },
+      specifications: {
+        en: [
+          { label: "Form", value: "Liquid" },
+          { label: "Packaging", value: "1 liter bottle" },
+        ],
+        te: [
+          { label: "రూపం", value: "ద్రవం" },
+          { label: "ప్యాకేజింగ్", value: "5kg" },
+        ],
+        hi: [
+          { label: "प्रकार", value: "तरल" },
+          { label: "पैकेजिंग", value: "1 लीटर बोतल" },
+        ],
+      },
+    },
+  ),
+  buildProduct(
+    "terror99",
+    "terror99",
+    "Nutrition",
+    "/products/terror99.png",
+    {
+      en: "Nutri Gold",
+      te: "న్యూట్రి గోల్డ్",
+      hi: "न्यूट्री गोल्ड",
+    },
+    {
+      en: "Supports strong growth in high-demand crop cycles.",
+      te: "అధిక డిమాండ్ గల పంట చక్రాల్లో బలమైన వృద్ధికి మద్దతు ఇస్తుంది.",
+      hi: "उच्च मांग वाली फसल चक्रों में मजबूत वृद्धि का समर्थन करता है।",
+    },
+    {
+      en: "A premium nutrient blend for modern farm management.",
+      te: "ఆధునిక వ్యవసాయ నిర్వహణకు ప్రీమియం పోషక మిశ్రమం.",
+      hi: "आधुनिक कृषि प्रबंधन के लिए एक प्रीमियम पोषक मिश्रण।",
+    },
+    {
+      en: "Apply 2 liters per acre during the active season.",
+      te: "సక్రియ సీజన్లో ఒక ఎకరానికి 2 లీటర్లు వర్తించండి.",
+      hi: "सक्रिय मौसम में प्रति एकड़ 2 लीटर लागू करें।",
+    },
+    {
+      en: ["Balanced nutrition", "Efficient uptake", "Premium quality"],
+      te: ["సమతుల్య పోషణ", "సమర్థవంతమైన గ్రహణం", "ప్రీమియం నాణ్యత"],
+      hi: ["संतुलित पोषण", "कुशल अवशोषण", "प्रीमियम गुणवत्ता"],
+    },
+    false,
+    {
+      composition: {
+        en: ["12% Humic Acid", "Drip Special", "Improves Soil", "Better Root Growth"],
+        te: ["12% హ్యూమిక్ యాసిడ్", "డ్రిప్ స్పెషల్", "నేల ఆరోగ్యం", "వేర్ల వృద్ధి"],
+        hi: ["12% ह्यूमिक एसिड", "ड्रिप स्पेशल", "मिट्टी स्वास्थ्य", "बेहतर जड़ वृद्धि"],
+      },
+      specifications: {
+        en: [
+          { label: "Form", value: "Liquid" },
+          { label: "Packaging", value: "1 liter bottle" },
+        ],
+        te: [
+          { label: "రూపం", value: "ద్రవం" },
+          { label: "ప్యాకేజింగ్", value: "5kg" },
+        ],
+        hi: [
+          { label: "प्रकार", value: "तरल" },
+          { label: "पैकेजिंग", value: "1 लीटर बोतल" },
+        ],
+      },
+    },
+  ),
+  buildProduct(
+    "space",
+    "space",
+    "Nutrition",
+    "/products/space.png",
+    {
+      en: "Nutri Gold",
+      te: "న్యూట్రి గోల్డ్",
+      hi: "न्यूट्री गोल्ड",
+    },
+    {
+      en: "Supports strong growth in high-demand crop cycles.",
+      te: "అధిక డిమాండ్ గల పంట చక్రాల్లో బలమైన వృద్ధికి మద్దతు ఇస్తుంది.",
+      hi: "उच्च मांग वाली फसल चक्रों में मजबूत वृद्धि का समर्थन करता है।",
+    },
+    {
+      en: "A premium nutrient blend for modern farm management.",
+      te: "ఆధునిక వ్యవసాయ నిర్వహణకు ప్రీమియం పోషక మిశ్రమం.",
+      hi: "आधुनिक कृषि प्रबंधन के लिए एक प्रीमियम पोषक मिश्रण।",
+    },
+    {
+      en: "Apply 2 liters per acre during the active season.",
+      te: "సక్రియ సీజన్లో ఒక ఎకరానికి 2 లీటర్లు వర్తించండి.",
+      hi: "सक्रिय मौसम में प्रति एकड़ 2 लीटर लागू करें।",
+    },
+    {
+      en: ["Balanced nutrition", "Efficient uptake", "Premium quality"],
+      te: ["సమతుల్య పోషణ", "సమర్థవంతమైన గ్రహణం", "ప్రీమియం నాణ్యత"],
+      hi: ["संतुलित पोषण", "कुशल अवशोषण", "प्रीमियम गुणवत्ता"],
+    },
+    false,
+    {
+      composition: {
+        en: ["12% Humic Acid", "Drip Special", "Improves Soil", "Better Root Growth"],
+        te: ["12% హ్యూమిక్ యాసిడ్", "డ్రిప్ స్పెషల్", "నేల ఆరోగ్యం", "వేర్ల వృద్ధి"],
+        hi: ["12% ह्यूमिक एसिड", "ड्रिप स्पेशल", "मिट्टी स्वास्थ्य", "बेहतर जड़ वृद्धि"],
+      },
+      specifications: {
+        en: [
+          { label: "Form", value: "Liquid" },
+          { label: "Packaging", value: "1 liter bottle" },
+        ],
+        te: [
+          { label: "రూపం", value: "ద్రవం" },
+          { label: "ప్యాకేజింగ్", value: "5kg" },
+        ],
+        hi: [
+          { label: "प्रकार", value: "तरल" },
+          { label: "पैकेजिंग", value: "1 लीटर बोतल" },
+        ],
+      },
+    },
   ),
 ];

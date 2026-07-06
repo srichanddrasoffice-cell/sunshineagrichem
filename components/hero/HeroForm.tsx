@@ -42,15 +42,15 @@ export function HeroForm({ dictionary }: HeroFormProps) {
     rounded-3xl
     border
     border-white/40
-    bg-white/80
+    bg-white/20
     p-8
-    shadow-2xl
+    shadow-lg
     backdrop-blur-xl
   "
     >
       {/* Name */}
       <div>
-        <label className="mb-2 block text-lg font-semibold text-slate-800">
+        <label className="mb-2 block text-lg font-semibold text-white">
           👨‍🌾 {dictionary.contact.name}
         </label>
 
@@ -85,7 +85,7 @@ export function HeroForm({ dictionary }: HeroFormProps) {
 
       {/* Location */}
       <div>
-        <label className="mb-2 block text-lg font-semibold text-slate-800">
+        <label className="mb-2 block text-lg font-semibold text-white">
           📍 {dictionary.contact.location}
         </label>
 
@@ -120,7 +120,7 @@ export function HeroForm({ dictionary }: HeroFormProps) {
 
       {/* Crop Name */}
       <div>
-        <label className="mb-2 block text-lg font-semibold text-slate-800">
+        <label className="mb-2 block text-lg font-semibold text-white">
           🌾 పంట పేరు
         </label>
 

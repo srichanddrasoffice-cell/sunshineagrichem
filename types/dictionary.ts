@@ -7,9 +7,7 @@ export interface HeroDictionary {
   stats: Array<{ value: string; label: string }>;
   features: string[];
   ctaPrimary: string;
-  ctaSecondary: string;
   formTitle: string;
-  formDescription: string;
 }
 
 export interface NavbarDictionary {
@@ -45,7 +43,6 @@ export interface AboutDictionary {
   visionText: string;
   heroTitle: string;
   heroParagraph1: string;
-  heroParagraph2: string;
   stats: Array<{ value: string; label: string }>;
   cards: Array<{ title: string; text: string }>;
 }

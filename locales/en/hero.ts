@@ -10,8 +10,7 @@ export const hero = {
     { value: "12", label: "States" },
   ],
   features: ["Field-tested products", "Expert agronomy support", "Fast delivery"],
-  ctaPrimary: "Request a consultation",
-  ctaSecondary: "Explore products",
-  formTitle: "Get a tailored recommendation",
-  formDescription: "Share your crop and location to receive the best guidance.",
+  ctaPrimary: "Explore products",
+  formTitle: "Share your crop and location to receive the best guidance.",
+  
 };

@@ -10,9 +10,7 @@ export const about = {
     "To become the most trusted partner for sustainable and profitable agriculture.",
   heroTitle: "Sustainable Solutions for Modern Agriculture",
   heroParagraph1:
-    "Sunshine Agrichem is committed to empowering farmers with innovative, eco-friendly agricultural solutions that improve soil fertility, strengthen crops, and increase productivity through advanced crop nutrition technologies.",
-  heroParagraph2:
-    "Our premium bio-stimulants, organic fertilizers, and plant nutrition products help farmers achieve healthier crops, better yields, and sustainable farming while reducing dependence on excessive chemical inputs.",
+    "Sunshine Agrichem is committed to empowering farmers with innovative, eco-friendly agricultural solutions that improve soil fertility, strengthen crops, and increase productivity through advanced crop nutrition technologies. Our premium bio-stimulants, organic fertilizers, and plant nutrition products help farmers achieve healthier crops, better yields, and sustainable farming while reducing dependence on excessive chemical inputs.",
   stats: [
     { value: "98%", label: "Farmer satisfaction" },
     { value: "24/7", label: "Support" },

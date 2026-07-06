@@ -27,6 +27,8 @@ export default async function LocaleLayout({ children, params }: { children: Rea
     <html lang={locale} translate="no">
       <head>
         <meta name="google" content="notranslate" />
+        <link rel="icon" href="/ProductsAll.png" type="image/png" />
+        <link rel="shortcut icon" href="/ProductsAll.png" type="image/png" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} bg-white text-slate-900 antialiased notranslate`}>
         <Navbar dictionary={dictionary} />

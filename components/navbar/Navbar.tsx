@@ -39,8 +39,8 @@ export function Navbar({ dictionary }: NavbarProps) {
   return (
     <header className={`sticky top-0 z-50 border-b transition ${scrolled ? "border-white/70 bg-white/80 backdrop-blur-xl" : "bg-transparent"}`}>
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-        <Link href={`/${currentLocale}`} className="text-xl font-semibold tracking-tight text-slate-900">
-          GreenGrow
+        <Link href={`/${currentLocale}`} className="text-xl font-semibold tracking-tight text-emerald-700">
+          Sunshine Agrichem
         </Link>
         <nav className="hidden items-center gap-7 lg:flex">
           {navItems.map((item) => (
