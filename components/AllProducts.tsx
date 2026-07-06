@@ -19,12 +19,7 @@ export default function AllProducts({
     <section className="bg-white py-8 sm:py-12 lg:py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
-        {/* Heading */}
-        <div className="mx-auto mb-8 max-w-3xl text-center lg:mb-10">
-          <h2 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl lg:text-5xl">
-            {dictionary.about.heroTitle}
-          </h2>
-        </div>
+       
 
         {/* Image + Content */}
         <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-12">
@@ -45,6 +40,12 @@ export default function AllProducts({
 
           {/* Content */}
           <div className="order-2">
+             {/* Heading */}
+        <div className="mx-auto mb-8 max-w-3xl text-center lg:mb-10">
+          <h2 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl lg:text-5xl">
+            {dictionary.about.heroTitle}
+          </h2>
+        </div>
 
             <p
               className={`text-base leading-7 text-slate-600 sm:text-lg sm:leading-8 ${

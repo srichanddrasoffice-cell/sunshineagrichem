@@ -60,7 +60,7 @@ export function HeroForm({ dictionary }: HeroFormProps) {
           className="
         h-10
         w-full
-        rounded-2xl
+        
         border-2
         border-slate-200
         bg-slate-50
@@ -95,7 +95,7 @@ export function HeroForm({ dictionary }: HeroFormProps) {
           className="
         h-10    
         w-full
-        rounded-2xl
+      
         border-2
         border-slate-200
         bg-slate-50
@@ -130,7 +130,7 @@ export function HeroForm({ dictionary }: HeroFormProps) {
           className="
         h-10
         w-full
-        rounded-2xl
+        
         border-2
         border-slate-200
         bg-slate-50

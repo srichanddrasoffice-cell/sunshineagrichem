@@ -114,7 +114,7 @@ export const products: Product[] = [
       specifications: {
         en: [
           { label: "Form", value: "Liquid" },
-          { label: "Packaging", value: "1 liter bottle" },
+          { label: "Packaging", value: "1L" },
         ],
         te: [
           { label: "రూపం", value: "ద్రవం" },
@@ -167,7 +167,7 @@ export const products: Product[] = [
       specifications: {
         en: [
           { label: "Form", value: "Liquid" },
-          { label: "Packaging", value: "1 liter bottle" },
+          { label: "Packaging", value: "1L" },
         ],
         te: [
           { label: "రూపం", value: "ద్రవం" },
@@ -220,7 +220,7 @@ export const products: Product[] = [
       specifications: {
         en: [
           { label: "Form", value: "Liquid" },
-          { label: "Packaging", value: "1 liter bottle" },
+          { label: "Packaging", value: "1L" },
         ],
         te: [
           { label: "రూపం", value: "ద్రవం" },
@@ -273,7 +273,7 @@ export const products: Product[] = [
       specifications: {
         en: [
           { label: "Form", value: "Liquid" },
-          { label: "Packaging", value: "1 liter bottle" },
+          { label: "Packaging", value: "1L" },
         ],
         te: [
           { label: "రూపం", value: "ద్రవం" },
@@ -326,7 +326,7 @@ export const products: Product[] = [
       specifications: {
         en: [
           { label: "Form", value: "Liquid" },
-          { label: "Packaging", value: "1 liter bottle" },
+          { label: "Packaging", value: "1L" },
         ],
         te: [
           { label: "రూపం", value: "ద్రవం" },
@@ -379,7 +379,7 @@ export const products: Product[] = [
       specifications: {
         en: [
           { label: "Form", value: "Liquid" },
-          { label: "Packaging", value: "1 liter bottle" },
+          { label: "Packaging", value: "1L" },
         ],
         te: [
           { label: "రూపం", value: "ద్రవం" },
@@ -432,7 +432,7 @@ export const products: Product[] = [
       specifications: {
         en: [
           { label: "Form", value: "Liquid" },
-          { label: "Packaging", value: "1 liter bottle" },
+          { label: "Packaging", value: "1L" },
         ],
         te: [
           { label: "రూపం", value: "ద్రవం" },
@@ -485,7 +485,7 @@ export const products: Product[] = [
       specifications: {
         en: [
           { label: "Form", value: "Liquid" },
-          { label: "Packaging", value: "1 liter bottle" },
+          { label: "Packaging", value: "1L" },
         ],
         te: [
           { label: "రూపం", value: "ద్రవం" },
@@ -538,7 +538,7 @@ export const products: Product[] = [
       specifications: {
         en: [
           { label: "Form", value: "Liquid" },
-          { label: "Packaging", value: "1 liter bottle" },
+          { label: "Packaging", value: "1L" },
         ],
         te: [
           { label: "రూపం", value: "ద్రవం" },
@@ -591,7 +591,7 @@ export const products: Product[] = [
       specifications: {
         en: [
           { label: "Form", value: "Liquid" },
-          { label: "Packaging", value: "1 liter bottle" },
+          { label: "Packaging", value: "1L" },
         ],
         te: [
           { label: "రూపం", value: "ద్రవం" },
@@ -644,7 +644,7 @@ export const products: Product[] = [
       specifications: {
         en: [
           { label: "Form", value: "Liquid" },
-          { label: "Packaging", value: "1 liter bottle" },
+          { label: "Packaging", value: "1L" },
         ],
         te: [
           { label: "రూపం", value: "ద్రవం" },
@@ -697,7 +697,7 @@ export const products: Product[] = [
       specifications: {
         en: [
           { label: "Form", value: "Liquid" },
-          { label: "Packaging", value: "1 liter bottle" },
+          { label: "Packaging", value: "1L" },
         ],
         te: [
           { label: "రూపం", value: "ద్రవం" },
@@ -782,7 +782,7 @@ export const products: Product[] = [
       specifications: {
         en: [
           { label: "Form", value: "Liquid" },
-          { label: "Packaging", value: "1 liter bottle" },
+          { label: "Packaging", value: "1L" },
         ],
         te: [
           { label: "రూపం", value: "ద్రవం" },
@@ -835,7 +835,7 @@ export const products: Product[] = [
       specifications: {
         en: [
           { label: "Form", value: "Liquid" },
-          { label: "Packaging", value: "1 liter bottle" },
+          { label: "Packaging", value: "1L" },
         ],
         te: [
           { label: "రూపం", value: "ద్రవం" },
@@ -888,7 +888,7 @@ export const products: Product[] = [
       specifications: {
         en: [
           { label: "Form", value: "Liquid" },
-          { label: "Packaging", value: "1 liter bottle" },
+          { label: "Packaging", value: "1L" },
         ],
         te: [
           { label: "రూపం", value: "ద్రవం" },
@@ -941,7 +941,7 @@ export const products: Product[] = [
       specifications: {
         en: [
           { label: "Form", value: "Liquid" },
-          { label: "Packaging", value: "1 liter bottle" },
+          { label: "Packaging", value: "1L" },
         ],
         te: [
           { label: "రూపం", value: "ద్రవం" },
@@ -994,7 +994,7 @@ export const products: Product[] = [
       specifications: {
         en: [
           { label: "Form", value: "Liquid" },
-          { label: "Packaging", value: "1 liter bottle" },
+          { label: "Packaging", value: "1L" },
         ],
         te: [
           { label: "రూపం", value: "ద్రవం" },
@@ -1047,7 +1047,7 @@ export const products: Product[] = [
       specifications: {
         en: [
           { label: "Form", value: "Liquid" },
-          { label: "Packaging", value: "1 liter bottle" },
+          { label: "Packaging", value: "1L" },
         ],
         te: [
           { label: "రూపం", value: "ద్రవం" },
@@ -1100,7 +1100,7 @@ export const products: Product[] = [
       specifications: {
         en: [
           { label: "Form", value: "Liquid" },
-          { label: "Packaging", value: "1 liter bottle" },
+          { label: "Packaging", value: "1L" },
         ],
         te: [
           { label: "రూపం", value: "ద్రవం" },
@@ -1153,7 +1153,7 @@ export const products: Product[] = [
       specifications: {
         en: [
           { label: "Form", value: "Liquid" },
-          { label: "Packaging", value: "1 liter bottle" },
+          { label: "Packaging", value: "1L" },
         ],
         te: [
           { label: "రూపం", value: "ద్రవం" },
@@ -1206,7 +1206,7 @@ export const products: Product[] = [
       specifications: {
         en: [
           { label: "Form", value: "Liquid" },
-          { label: "Packaging", value: "1 liter bottle" },
+          { label: "Packaging", value: "1L" },
         ],
         te: [
           { label: "రూపం", value: "ద్రవం" },
@@ -1259,7 +1259,7 @@ export const products: Product[] = [
       specifications: {
         en: [
           { label: "Form", value: "Liquid" },
-          { label: "Packaging", value: "1 liter bottle" },
+          { label: "Packaging", value: "1L" },
         ],
         te: [
           { label: "రూపం", value: "ద్రవం" },
@@ -1312,7 +1312,7 @@ export const products: Product[] = [
       specifications: {
         en: [
           { label: "Form", value: "Liquid" },
-          { label: "Packaging", value: "1 liter bottle" },
+          { label: "Packaging", value: "1L" },
         ],
         te: [
           { label: "రూపం", value: "ద్రవం" },
@@ -1365,7 +1365,7 @@ export const products: Product[] = [
       specifications: {
         en: [
           { label: "Form", value: "Liquid" },
-          { label: "Packaging", value: "1 liter bottle" },
+          { label: "Packaging", value: "1L" },
         ],
         te: [
           { label: "రూపం", value: "ద్రవం" },
@@ -1418,7 +1418,7 @@ export const products: Product[] = [
       specifications: {
         en: [
           { label: "Form", value: "Liquid" },
-          { label: "Packaging", value: "1 liter bottle" },
+          { label: "Packaging", value: "1L" },
         ],
         te: [
           { label: "రూపం", value: "ద్రవం" },
@@ -1471,7 +1471,7 @@ export const products: Product[] = [
       specifications: {
         en: [
           { label: "Form", value: "Liquid" },
-          { label: "Packaging", value: "1 liter bottle" },
+          { label: "Packaging", value: "1L" },
         ],
         te: [
           { label: "రూపం", value: "ద్రవం" },
@@ -1524,7 +1524,7 @@ export const products: Product[] = [
       specifications: {
         en: [
           { label: "Form", value: "Liquid" },
-          { label: "Packaging", value: "1 liter bottle" },
+          { label: "Packaging", value: "1L" },
         ],
         te: [
           { label: "రూపం", value: "ద్రవం" },
@@ -1577,7 +1577,7 @@ export const products: Product[] = [
       specifications: {
         en: [
           { label: "Form", value: "Liquid" },
-          { label: "Packaging", value: "1 liter bottle" },
+          { label: "Packaging", value: "1L" },
         ],
         te: [
           { label: "రూపం", value: "ద్రవం" },
