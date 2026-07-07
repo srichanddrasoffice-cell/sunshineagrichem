@@ -19,7 +19,7 @@ export function Hero({ dictionary }: HeroProps) {
       <div
         className="absolute inset-0 bg-cover  bg-no-repeat"
         style={{
-          backgroundImage: "url('/gpther.png')",
+          backgroundImage: "url('/herbg.png')",
         }}
       />
 

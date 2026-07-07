@@ -95,7 +95,7 @@ export const products: Product[] = [
       hi: "अनाज और सब्जियों के लिए वैज्ञानिक रूप से तैयार किया गया पोषक मिश्रण।",
     },
     {
-      en: "4kg (Paddy), 8kg (Sugarcane), or 6–7kg (Vegetables)/per Acer.",
+      en: "DOSAGE: 4kg (Paddy), 8kg (Sugarcane), or 6–7kg (Vegetables)/per Acer.",
       te: "మోతాదు: వరి – 4 కిలోలు/ఎకరం | చెరకు – 8 కిలోలు/ఎకరం | కూరగాయలు – 6 నుండి 7 కిలోలు/ఎకరం",
       hi: "विकास की प्रारंभिक अवस्थाओं में प्रति एकड़ 2-3 लीटर का उपयोग करें।",
     },
@@ -118,11 +118,11 @@ export const products: Product[] = [
         ],
         te: [
           { label: "రూపం", value: "ద్రవం" },
-          { label: "ప్యాకేజింగ్", value: "1 లీటర్ బాటిల్" },
+          { label: "ప్యాకేజింగ్", value: "1 లీటర్" },
         ],
         hi: [
           { label: "प्रकार", value: "तरल" },
-          { label: "पैकेजिंग", value: "1 लीटर बोतल" },
+          { label: "पैकेजिंग", value: "1 लीटर" },
         ],
       },
     },

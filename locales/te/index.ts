@@ -21,6 +21,7 @@ export const te = {
     phone: "ఫోన్",
     email: "ఇమెయిల్",
     location: "స్థానం",
+    cropname: "పంట పేరు",
     message: "సందేశం",
     submit: "విచారణ పంపండి",
     successTitle: "మమ్మల్ని సంప్రదించినందుకు ధన్యవాదాలు",

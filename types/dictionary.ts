@@ -84,6 +84,7 @@ export interface ContactDictionary {
   phone: string;
   email: string;
   location: string;
+  cropname: string;
   message: string;
   submit: string;
   successTitle: string;

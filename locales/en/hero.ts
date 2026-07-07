@@ -1,8 +1,8 @@
 export const hero = {
-  eyebrow: "Sustainable Agriculture Solutions for India",
-  title: "Empowering Indian Farmers. Growing a Greener Tomorrow",
+  eyebrow: "For farmers. With farmers. For the growth and prosperity of farmers.",
+  title: "Since 2015 With quality products, delivering trusted solutions for better crop growth.",
   description:
-    "Advancing yield optimization through genetically superior inputs — reducing chemical dependency, restoring soil health, and unlocking India's agricultural potential for global markets.",
+    "Our initiative is to provide farmers with expert agricultural guidance and detailed information about our products. We are always available to support you with reliable advice and the right solutions to help you achieve healthy crops, better yields, and successful farming.",
   stats: [
     { value: "2500+", label: "Farmers" },
     { value: "150+", label: "Dealers" },

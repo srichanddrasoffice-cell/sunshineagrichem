@@ -21,6 +21,7 @@ export const hi = {
     phone: "फोन",
     email: "ईमेल",
     location: "स्थान",
+    cropname: "फसल का नाम",
     message: "संदेश",
     submit: "पूछताछ भेजें",
     successTitle: "संपर्क करने के लिए धन्यवाद",

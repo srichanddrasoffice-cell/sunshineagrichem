@@ -21,6 +21,7 @@ export const en = {
     phone: "Phone",
     email: "Email",
     location: "Location",
+    cropname: "Crop name",
     message: "Message",
     submit: "Send enquiry",
     successTitle: "Thanks for reaching out",

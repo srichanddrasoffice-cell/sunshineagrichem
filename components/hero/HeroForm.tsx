@@ -38,42 +38,32 @@ export function HeroForm({ dictionary }: HeroFormProps) {
     <form
       onSubmit={handleSubmit(onSubmit)}
       className="
-    space-y-6
-    rounded-3xl
-    border
-    border-white/40
-    bg-white/20
-    p-8
-    shadow-lg
-    backdrop-blur-xl
-  "
+    space-y-4
+    rounded-2xl
+    bg-transparent"
     >
       {/* Name */}
       <div>
-        <label className="mb-2 block text-lg font-semibold text-white">
-          👨‍🌾 {dictionary.contact.name}
-        </label>
-
         <input
           {...register("name")}
-          placeholder="మీ పూర్తి పేరు"
+          placeholder={`👨‍🌾 ${dictionary.contact.name}`}
           className="
-        h-10
-        w-full
-        
-        border-2
-        border-slate-200
-        bg-slate-50
-        px-4
-        text-lg
-        font-medium
-        text-slate-900
-        outline-none
-        transition-all
-        duration-200
-        focus:border-emerald-600
-        focus:bg-white
-      "
+    h-10
+    w-full
+    border-2
+    border-slate-200
+    bg-slate-50
+    px-4
+    text-lg
+    font-medium
+    text-slate-900
+    outline-none
+    transition-all
+    duration-200
+    placeholder:text-slate-500
+    focus:border-emerald-600
+    focus:bg-white
+  "
         />
 
         {errors.name && (
@@ -85,32 +75,27 @@ export function HeroForm({ dictionary }: HeroFormProps) {
 
       {/* Location */}
       <div>
-        <label className="mb-2 block text-lg font-semibold text-white">
-          📍 {dictionary.contact.location}
-        </label>
-
         <input
           {...register("location")}
-          placeholder="మీ గ్రామం / జిల్లా"
+          placeholder={`📍 ${dictionary.contact.location}`}
           className="
-        h-10    
-        w-full
-      
-        border-2
-        border-slate-200
-        bg-slate-50
-        px-4
-        text-lg
-        font-medium
-        text-slate-900
-        outline-none
-        transition-all
-        duration-200
-        focus:border-emerald-600
-        focus:bg-white
-      "
+    h-10
+    w-full
+    border-2
+    border-slate-200
+    bg-slate-50
+    px-4
+    text-lg
+    font-medium
+    text-slate-900
+    outline-none
+    transition-all
+    duration-200
+    placeholder:text-slate-500
+    focus:border-emerald-600
+    focus:bg-white
+  "
         />
-
         {errors.location && (
           <p className="mt-2 text-sm text-red-600">
             {errors.location.message}
@@ -120,30 +105,26 @@ export function HeroForm({ dictionary }: HeroFormProps) {
 
       {/* Crop Name */}
       <div>
-        <label className="mb-2 block text-lg font-semibold text-white">
-          🌾 పంట పేరు
-        </label>
-
         <input
           {...register("cropName" as any)}
-          placeholder="ఉదా: వరి, పత్తి, మిర్చి, మొక్కజొన్న"
+          placeholder={`🌾 ${dictionary.contact.cropname}`}
           className="
-        h-10
-        w-full
-        
-        border-2
-        border-slate-200
-        bg-slate-50
-        px-4
-        text-lg
-        font-medium
-        text-slate-900
-        outline-none
-        transition-all
-        duration-200
-        focus:border-emerald-600
-        focus:bg-white
-      "
+    h-10
+    w-full
+    border-2
+    border-slate-200
+    bg-slate-50
+    px-4
+    text-lg
+    font-medium
+    text-slate-900
+    outline-none
+    transition-all
+    duration-200
+    placeholder:text-slate-500
+    focus:border-emerald-600
+    focus:bg-white
+  "
         />
       </div>
 
