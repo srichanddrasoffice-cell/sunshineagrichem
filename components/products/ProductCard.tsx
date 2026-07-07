@@ -41,24 +41,40 @@ export function ProductCard({ product, locale, autoFlip = false }: ProductCardPr
     return !window.matchMedia("(hover: hover) and (pointer: fine)").matches;
   });
   const suppressClickRef = useRef(false);
+  const cardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!autoFlip) return;
-
     const mediaQuery = window.matchMedia("(hover: hover) and (pointer: fine)");
     const updateDeviceType = () => {
       const canHover = mediaQuery.matches;
       setIsTouchDevice(!canHover);
-
-      if (!canHover) {
-        setIsFlipped(true);
-      }
     };
 
     updateDeviceType();
     mediaQuery.addEventListener("change", updateDeviceType);
 
     return () => mediaQuery.removeEventListener("change", updateDeviceType);
+  }, []);
+
+  useEffect(() => {
+    if (!autoFlip || !cardRef.current) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          const isTouchDeviceNow = !window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+          if (isTouchDeviceNow) {
+            setIsFlipped(true);
+          }
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(cardRef.current);
+
+    return () => observer.disconnect();
   }, [autoFlip]);
 
   const handleNavigate = () => {
@@ -66,6 +82,10 @@ export function ProductCard({ product, locale, autoFlip = false }: ProductCardPr
   };
 
   const handleTouchEnd = (event: TouchEvent<HTMLElement>) => {
+    // Check if the touch target is a button to avoid interfering with button clicks
+    if ((event.target as HTMLElement).closest('button')) {
+      return;
+    }
     event.preventDefault();
     suppressClickRef.current = true;
     setIsFlipped((prev) => !prev);
@@ -104,7 +124,7 @@ export function ProductCard({ product, locale, autoFlip = false }: ProductCardPr
   };
 
   return (
-    <div className="group [perspective:1000px]">
+    <div className="group [perspective:1000px]" ref={cardRef}>
       <article
         role="button"
         tabIndex={0}

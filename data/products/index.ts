@@ -131,7 +131,7 @@ export const products: Product[] = [
     "allright-gr",
     "allright-gr",
     "Protection",
-    "/products/allrightgr.png",
+    "/products/allrightGR.png",
     {
       en: "ALL RIGHT GR",
       te: "ఆల్‌రైట్GR",

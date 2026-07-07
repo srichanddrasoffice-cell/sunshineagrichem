@@ -106,7 +106,7 @@ export function HeroForm({ dictionary }: HeroFormProps) {
       {/* Crop Name */}
       <div>
         <input
-          {...register("cropName" as any)}
+          {...register("cropName")}
           placeholder={`🌾 ${dictionary.contact.cropname}`}
           className="
     h-10
@@ -136,7 +136,7 @@ export function HeroForm({ dictionary }: HeroFormProps) {
       h-15
       w-full
       rounded-2xl
-      bg-gradient-to-r
+      bg-linear-to-r
       from-emerald-600
       to-green-500
       text-lg
