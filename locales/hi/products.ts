@@ -7,6 +7,6 @@ export const products = {
   dosage: "खुराक",
   specifications: "विशिष्टताएँ",
   faq: "अक्सर पूछे जाने वाले प्रश्न",
-  brochure: "ब्रोशर डाउनलोड करें",
+  brochure: "ब्रोशर",
   related: "संबंधित उत्पाद",
 };

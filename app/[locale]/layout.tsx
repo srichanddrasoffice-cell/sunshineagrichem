@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/navbar/Navbar";
 import { Footer } from "@/components/footer/Footer";
+import FloatingActions from "@/components/FloatingActions";
 import { getDictionary } from "@/lib/getDictionary";
 import { defaultLocale, type Locale } from "@/lib/i18n";
 
@@ -30,9 +31,10 @@ export default async function LocaleLayout({ children, params }: { children: Rea
         <link rel="icon" href="/ProductsAll.png" type="image/png" />
         <link rel="shortcut icon" href="/ProductsAll.png" type="image/png" />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} bg-white text-slate-900 antialiased notranslate`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} bg-sunshine-cream text-sunshine-text antialiased notranslate`}>
         <Navbar dictionary={dictionary} />
         {children}
+        <FloatingActions brochureLabel={dictionary.products.brochure} />
         <Footer dictionary={dictionary} />
       </body>
     </html>

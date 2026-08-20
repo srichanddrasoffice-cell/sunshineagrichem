@@ -7,6 +7,6 @@ export const products = {
   dosage: "Dosage",
   specifications: "Specifications",
   faq: "FAQs",
-  brochure: "Download brochure",
+  brochure: "Brochure",
   related: "Related products",
 };

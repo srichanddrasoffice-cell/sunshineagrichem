@@ -9,10 +9,10 @@ export function Button({ variant = "primary", className, children, ...props }: B
   return (
     <button
       className={clsx(
-        "rounded-full px-5 py-3 font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-emerald-500",
+        "rounded-full px-5 py-3 font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-sunshine-green/40",
         variant === "primary"
-          ? "bg-emerald-600 text-white hover:bg-emerald-700"
-          : "bg-white/80 text-slate-900 shadow-sm hover:bg-white",
+          ? "bg-sunshine-green text-white hover:bg-sunshine-greenDark"
+          : "bg-sunshine-orange text-white shadow-sm hover:bg-[#e58f00]",
         className,
       )}
       {...props}

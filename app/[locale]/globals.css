@@ -1,13 +1,34 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #0f172a;
+  --background: #f5f2ea;
+  --foreground: #0f2f22;
+  --sunshine-green: #0d6a3d;
+  --sunshine-green-dark: #0a4f30;
+  --sunshine-green-deep: #072f1f;
+  --sunshine-gold: #dbab2d;
+  --sunshine-gold-soft: #f6de99;
+  --sunshine-yellow: #f4d35e;
+  --sunshine-cream: #f8f5ef;
+  --sunshine-green-light: #eaf7ee;
+  --sunshine-orange-light: #f9f0d7;
+  --sunshine-text: #173124;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-sunshine-green: var(--sunshine-green);
+  --color-sunshine-greenDark: var(--sunshine-green-dark);
+  --color-sunshine-greenDeep: var(--sunshine-green-deep);
+  --color-sunshine-gold: var(--sunshine-gold);
+  --color-sunshine-goldSoft: var(--sunshine-gold-soft);
+  --color-sunshine-orange: var(--sunshine-gold);
+  --color-sunshine-yellow: var(--sunshine-yellow);
+  --color-sunshine-cream: var(--sunshine-cream);
+  --color-sunshine-greenLight: var(--sunshine-green-light);
+  --color-sunshine-orangeLight: var(--sunshine-orange-light);
+  --color-sunshine-text: var(--sunshine-text);
   --font-sans: "Noto Sans", "Segoe UI", "Arial", "Helvetica", sans-serif;
   --font-mono: "Noto Sans Mono", "Consolas", monospace;
 }
@@ -16,7 +37,7 @@
 html { scroll-behavior: smooth; }
 body {
   margin: 0;
-  background: var(--background);
+  background: linear-gradient(180deg, #f8f5ef 0%, #ffffff 100%);
   color: var(--foreground);
   font-family: "Noto Sans", "Segoe UI", "Arial", "Helvetica", sans-serif;
   font-feature-settings: "liga" 1, "kern" 1;

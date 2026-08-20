@@ -7,6 +7,6 @@ export const products = {
   dosage: "డోసేజ్",
   specifications: "నిర్దేశనలు",
   faq: "తరచుగా అడిగే ప్రశ్నలు",
-  brochure: "బ్రోచర్ డౌన్లోడ్ చేయండి",
+  brochure: "బ్రోచర్",
   related: "సంబంధిత ఉత్పత్తులు",
 };

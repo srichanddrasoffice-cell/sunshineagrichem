@@ -10,7 +10,7 @@ export default function ProductsGrid({ locale }: ProductsGridProps) {
   return (
     <section className="mx-auto w-full max-w-7xl px-2 py-4 sm:px-6 sm:py-10 lg:px-8">
       <div className="mb-4 sm:mb-8">
-        <h2 className="text-xl font-bold text-gray-900 sm:text-3xl">
+        <h2 className="text-xl font-bold text-sunshine-greenDeep sm:text-3xl">
           {locale === "en"
             ? "Products"
             : locale === "te"
@@ -18,7 +18,7 @@ export default function ProductsGrid({ locale }: ProductsGridProps) {
             : "उत्पाद"}
         </h2>
 
-        <p className="mt-1 text-xs text-gray-600 sm:mt-2 sm:text-base">
+        <p className="mt-1 text-xs text-sunshine-text/75 sm:mt-2 sm:text-base">
           {locale === "en"
             ? "Explore our agriculture nutrition and crop growth solutions."
             : locale === "te"

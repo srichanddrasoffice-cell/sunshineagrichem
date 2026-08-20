@@ -46,8 +46,8 @@ export default function WhyChooseUs() {
             {/* Main Image */}
             <div className="relative rounded-lg overflow-hidden shadow-2xl z-10">
               <img
-                src="/SunshineLogo.png"
-                alt="Farmer Technology"
+                src="/Untitled%20design.svg"
+                alt="Sunshine Logo"
                 className="w-full h-[350px] md:h-[500px] object-cover"
               />
             </div>

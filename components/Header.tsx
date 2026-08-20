@@ -78,7 +78,7 @@ export default function Header() {
   }
 
   return (
-    <header className="sticky top-0 z-50 border-b bg-white/90 backdrop-blur-lg">
+    <header className="sticky top-0 z-50 border-b border-sunshine-green/10 bg-white backdrop-blur-lg">
 
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
 
@@ -86,22 +86,22 @@ export default function Header() {
 
         <Link
           href={`/${currentLocale}`}
-          className="flex items-center"
+          className="flex items-center gap-0"
         >
           <Image
-            src="/SunshineLogo.png"
-            alt="Sunshine Agrichem"
-            width={180}
-            height={90}
+            src="/2.png"
+            alt="Sunshine Inc"
+            width={120}
+            height={60}
+            className="h-auto w-[120px]"
           />
-
-          <div className="hidden sm:block">
-            
-
-            <p className="-mt-1 text-xs text-green-800">
-              Agrichem
-            </p>
-          </div>
+          <Image
+            src="/1.png"
+            alt="Sunshine Inc"
+            width={220}
+            height={60}
+            className="h-auto w-[220px]"
+          />
         </Link>
 
         {/* Desktop Menu */}

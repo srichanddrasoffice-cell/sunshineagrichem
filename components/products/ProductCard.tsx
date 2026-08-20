@@ -1,8 +1,6 @@
-"use client";
-
-import { useEffect, useRef, useState, type KeyboardEvent, type MouseEvent, type TouchEvent } from "react";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 import type { Locale } from "@/lib/i18n";
 import type { Product } from "@/types/product";
 
@@ -12,198 +10,64 @@ interface ProductCardProps {
   autoFlip?: boolean;
 }
 
-function getAccent(category: string) {
-  switch (category.toLowerCase()) {
-    case "protection":
-      return { background: "linear-gradient(135deg, #eff6ff 0%, #f8fafc 100%)", accent: "#2563eb" };
-    case "nutrition":
-    default:
-      return { background: "linear-gradient(135deg, #eff6ff 0%, #f8fafc 100%)", accent: "#2563eb" };
-  }
-}
-
-function getPackaging(specs?: Array<{ label: string; value: string }>) {
-  if (!specs || specs.length === 0) return "";
-  const found = specs.find((s) => /pack/i.test(s.label.toLowerCase()));
-  if (found) return found.value;
-  return specs[1]?.value ?? specs[0]?.value ?? "";
-}
-
-export function ProductCard({ product, locale, autoFlip = false }: ProductCardProps) {
-  const router = useRouter();
+export function ProductCard({ product, locale }: ProductCardProps) {
   const translation = product.translations[locale];
-  const accent = getAccent(product.category);
   const imageSrc = product.images?.[0] ?? "/products/magic.jpg";
-  const packaging = getPackaging(translation.specifications);
-  const [isFlipped, setIsFlipped] = useState(false);
-  const [isTouchDevice, setIsTouchDevice] = useState(() => {
-    if (typeof window === "undefined") return false;
-    return !window.matchMedia("(hover: hover) and (pointer: fine)").matches;
-  });
-  const suppressClickRef = useRef(false);
-  const cardRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(hover: hover) and (pointer: fine)");
-    const updateDeviceType = () => {
-      const canHover = mediaQuery.matches;
-      setIsTouchDevice(!canHover);
-    };
-
-    updateDeviceType();
-    mediaQuery.addEventListener("change", updateDeviceType);
-
-    return () => mediaQuery.removeEventListener("change", updateDeviceType);
-  }, []);
-
-  useEffect(() => {
-    if (!autoFlip || !cardRef.current) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          const isTouchDeviceNow = !window.matchMedia("(hover: hover) and (pointer: fine)").matches;
-          if (isTouchDeviceNow) {
-            setIsFlipped(true);
-          }
-          observer.unobserve(entry.target);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    observer.observe(cardRef.current);
-
-    return () => observer.disconnect();
-  }, [autoFlip]);
-
-  const handleNavigate = () => {
-    router.push(`/${locale}/products/${product.slug}`);
-  };
-
-  const handleTouchEnd = (event: TouchEvent<HTMLElement>) => {
-    // Check if the touch target is a button to avoid interfering with button clicks
-    if ((event.target as HTMLElement).closest('button')) {
-      return;
-    }
-    event.preventDefault();
-    suppressClickRef.current = true;
-    setIsFlipped((prev) => !prev);
-  };
-
-  const handleCardClick = (event?: MouseEvent<HTMLElement>) => {
-    if (suppressClickRef.current) {
-      suppressClickRef.current = false;
-      return;
-    }
-
-    if (isTouchDevice) {
-      event?.preventDefault();
-      setIsFlipped((prev) => !prev);
-      return;
-    }
-
-    handleNavigate();
-  };
-
-  const handleDetailsClick = (event: MouseEvent<HTMLButtonElement>) => {
-    event.stopPropagation();
-    handleNavigate();
-  };
-
-  const handleCardKeyDown = (event: KeyboardEvent<HTMLElement>) => {
-    if (event.key === "Enter" || event.key === " ") {
-      event.preventDefault();
-      handleCardClick();
-    }
-  };
-
-  const faceStyle = {
-    backfaceVisibility: "hidden" as const,
-    WebkitBackfaceVisibility: "hidden" as const,
-  };
+  const badges = translation.benefits.slice(0, 2);
 
   return (
-    <div className="group [perspective:1000px]" ref={cardRef}>
-      <article
-        role="button"
-        tabIndex={0}
-        onClick={handleCardClick}
-        onTouchEnd={handleTouchEnd}
-        onKeyDown={handleCardKeyDown}
-        className={`relative h-full min-h-[250px] w-full rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-500 [transform-style:preserve-3d] ${isFlipped ? "[transform:rotateY(180deg)]" : ""} group-hover:[transform:rotateY(180deg)]`}
-        style={{ touchAction: "manipulation" }}
-      >
-        <div className="absolute inset-0 flex h-full flex-col overflow-hidden rounded-2xl bg-white" style={faceStyle}>
-         
-
-          <div className="mt-2 flex flex-1 flex-col px-3 pb-3 sm:px-3.5 sm:pb-3.5">
-            <div className="flex items-center justify-center rounded-xl border border-slate-100 p-2 sm:p-3" style={{ backgroundImage: accent.background }}>
+    <Link href={`/${locale}/products/${product.slug}`} className="group block h-full">
+      <article className="flex h-full flex-col overflow-hidden rounded-[28px] border border-[#e6d7a6] bg-[linear-gradient(180deg,#ffffff_0%,#fffdf7_100%)] shadow-[0_18px_35px_rgba(13,106,61,0.10)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_42px_rgba(13,106,61,0.18)]">
+        <div className="bg-[radial-gradient(circle_at_top,_rgba(255,245,200,0.9),_rgba(255,255,255,0.96),_rgba(234,247,238,0.92))] p-3">
+          <div className="overflow-hidden rounded-[22px] border border-[#f1e4bb] bg-[#f7f3e8]">
+            <div className="relative flex items-center justify-center bg-[linear-gradient(135deg,#fff7d6_0%,#ecf9ef_100%)] p-3">
               <Image
                 src={imageSrc}
                 alt={translation.name}
-                width={180}
-                height={200}
+                width={640}
+                height={640}
                 priority
-                className="h-30 w-auto max-w-full object-contain drop-shadow-sm transition-transform duration-200 group-hover:scale-105 sm:h-24"
+                className="aspect-square h-36 w-full max-w-[220px] object-contain transition-transform duration-500 group-hover:scale-105 sm:h-40"
               />
             </div>
-
-            <div className="mt-2 space-y-2">
-             
-
-              {translation.dosage ? (
-                <div className="rounded-lg border border-emerald-100 bg-emerald-50 px-2.5 py-2">
-                  <h3 className="min-w-0 flex-1 text-[13px] text-center font-semibold leading-4 text-emerald-700 sm:text-[14px] sm:leading-5">
-              {translation.name}
-            </h3>
-             <div className="mt-1 text-[11px] leading-4 text-slate-700 sm:text-xs">
-            <ul className="mt-2 space-y-1.5">
-              {translation.specifications.slice(0, 3).map((specification) => (
-                <li key={`${specification.label}-${specification.value}`} className="text-[11px] leading-4 text-slate-600">
-                  <span className="font-semibold text-slate-800">{specification.label}:</span> {specification.value}
-                </li>
-              ))}
-            </ul>
-          </div>
-                </div>
-              ) : null}
-            </div>
           </div>
         </div>
 
-        <div className="absolute inset-0 flex h-full flex-col rounded-2xl border border-slate-200 bg-slate-50 p-3" style={{ ...faceStyle, transform: "rotateY(180deg)" }}>
-          <div className="flex items-start justify-between gap-2">
-            <div>
-             
-              <h3 className="mt-1 text-[13px] font-semibold leading-4 text-slate-900 sm:text-[14px] sm:leading-5">
-                {translation.name}
-              </h3>
-            </div>
-            {packaging ? (
-              <span className="shrink-0 rounded-full px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-emerald-700" style={{ backgroundColor: `${accent.accent}14` }}>
-                {packaging}
+        <div className="flex flex-1 flex-col gap-2 bg-white/60 p-3.5 sm:p-4">
+          <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#0d6a3d]">
+            {product.category}
+          </p>
+
+          <h3 className="line-clamp-2 text-sm font-bold leading-snug text-[#0b2d1d] sm:text-base">
+            {translation.name}
+          </h3>
+
+          <div className="flex flex-wrap gap-1.5">
+            {badges.map((badge) => (
+              <span
+                key={badge}
+                className="rounded-full bg-[linear-gradient(135deg,#fef3c7_0%,#f4d35e_100%)] px-2 py-1 text-[10px] font-semibold text-[#123d2a]"
+              >
+                {badge}
               </span>
-            ) : null}
+            ))}
           </div>
 
-           <p className="line-clamp-3 text-[11px] leading-4 text-slate-600 sm:text-xs">
-                {translation.shortDescription}
-              </p>
+          <p className="line-clamp-2 text-[11px] leading-relaxed text-[#4c6257] sm:text-xs">
+            {translation.shortDescription}
+          </p>
 
-            <p className="mt-1 text-[11px] leading-4 text-slate-700">{translation.dosage}</p>
+          <p className="line-clamp-1 text-[10px] text-[#4c6257] sm:text-[11px]">
+            <span className="font-semibold text-[#123d2a]">Crops:</span> {translation.crops}
+          </p>
 
-
-          <button
-            type="button"
-            onClick={handleDetailsClick}
-            className="mt-auto inline-flex items-center justify-center rounded-xl bg-emerald-600 px-3 py-2 text-[11px] font-semibold text-white transition-colors duration-200 hover:bg-emerald-700"
-          >
-            More details
-          </button>
+          <span className="mt-auto inline-flex items-center gap-1 pt-1 text-xs font-semibold text-[#0d6a3d]">
+            View Details
+            <ArrowRight className="size-3.5 text-[#d9a72d] transition-transform duration-300 group-hover:translate-x-1" />
+          </span>
         </div>
       </article>
-    </div>
+    </Link>
   );
 }
 

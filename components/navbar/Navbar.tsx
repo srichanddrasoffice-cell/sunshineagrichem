@@ -37,53 +37,59 @@ export function Navbar({ dictionary }: NavbarProps) {
   );
 
   return (
-    <header className={`sticky top-0 z-50 border-b transition ${scrolled ? "border-white/70 bg-white/80 backdrop-blur-xl" : "bg-transparent"}`}>
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-        <Link href={`/${currentLocale}`} className="text-xl font-semibold tracking-tight text-emerald-700">
-          Sunshine Agrichem
+    <header className="sticky top-0 z-50 border-b border-sunshine-green/10 bg-white transition">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 lg:px-8">
+        <Link href={`/${currentLocale}`} className="flex items-center gap-0">
+          <img src="/2.png" alt="Sunshine Inc" className="h-12 w-auto md:h-16" />
+          <img src="/1.png" alt="Sunshine Inc" className="h-12 w-auto md:h-16" />
         </Link>
         <nav className="hidden items-center gap-7 lg:flex">
           {navItems.map((item) => (
-            <Link key={item.href} href={item.href} className={`text-sm font-medium ${pathname === item.href ? "text-emerald-700" : "text-slate-700 hover:text-emerald-700"}`}>
+            <Link key={item.href} href={item.href} className={`text-sm font-medium ${pathname === item.href ? "text-sunshine-greenDeep" : "text-sunshine-text hover:text-sunshine-green"}`}>
               {item.label}
             </Link>
           ))}
         </nav>
-        <div className="flex items-center gap-3">
-          <div className="hidden items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-3 py-2 md:flex">
-            <Globe size={16} className="text-emerald-600" />
-            <select value={currentLocale} onChange={(event) => {
-              const next = event.target.value as Locale;
-              const nextPath = pathname.replace(`/${currentLocale}`, `/${next}`);
-              window.location.href = nextPath || `/${next}`;
-            }} className="bg-transparent text-sm outline-none">
-              <option value="en">English</option>
-              <option value="te">తెలుగు</option>
-              <option value="hi">हिन्दी</option>
+        <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1 rounded-full border border-sunshine-green/15 bg-white/80 px-2 py-2 shadow-sm">
+            <Globe size={16} className="text-sunshine-green" />
+
+            <select
+              value={currentLocale}
+              onChange={(event) => {
+                const next = event.target.value as Locale;
+                const nextPath = pathname.replace(`/${currentLocale}`, `/${next}`);
+                window.location.href = nextPath || `/${next}`;
+              }}
+              className="bg-transparent text-sm outline-none text-sunshine-text"
+            >
+              <option value="en">EN</option>
+              <option value="te">తెలు</option>
+              <option value="hi">हिं</option>
             </select>
           </div>
-          <Link href={`/${currentLocale}/contact`} className="hidden rounded-full bg-emerald-600 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-emerald-600/20 lg:inline-flex">
+          <Link href={`/${currentLocale}/contact`} className="hidden rounded-full bg-sunshine-green px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-sunshine-green/20 transition hover:bg-sunshine-greenDark lg:inline-flex">
             {dictionary.navbar.cta}
           </Link>
-          <button className="rounded-full border border-slate-200 bg-white/80 p-2 lg:hidden" onClick={() => setOpen((value) => !value)} aria-label="Toggle navigation">
+          <button className="rounded-full border border-sunshine-green/15 bg-white/80 p-2 text-sunshine-greenDeep lg:hidden" onClick={() => setOpen((value) => !value)} aria-label="Toggle navigation">
             {open ? <X size={18} /> : <Menu size={18} />}
           </button>
         </div>
       </div>
       {open && (
-        <div className="border-t border-slate-200 bg-white/95 px-6 py-4 lg:hidden">
+        <div className="border-t border-sunshine-green/10 bg-white/95 px-6 py-4 lg:hidden">
           <div className="space-y-3">
             {navItems.map((item) => (
-              <Link key={item.href} href={item.href} className="block text-sm font-medium text-slate-700" onClick={() => setOpen(false)}>
+              <Link key={item.href} href={item.href} className="block text-sm font-medium text-sunshine-text" onClick={() => setOpen(false)}>
                 {item.label}
               </Link>
             ))}
-            <div className="rounded-2xl border border-slate-200 bg-slate-50 p-3">
+            <div className="rounded-2xl border border-sunshine-green/10 bg-sunshine-greenLight p-3">
               <select value={currentLocale} onChange={(event) => {
                 const next = event.target.value as Locale;
                 const nextPath = pathname.replace(`/${currentLocale}`, `/${next}`);
                 window.location.href = nextPath || `/${next}`;
-              }} className="w-full bg-transparent text-sm outline-none">
+              }} className="w-full bg-transparent text-sm outline-none text-sunshine-text">
                 <option value="en">English</option>
                 <option value="te">తెలుగు</option>
                 <option value="hi">हिन्दी</option>
