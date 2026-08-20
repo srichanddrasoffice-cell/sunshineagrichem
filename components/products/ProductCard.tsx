@@ -63,7 +63,7 @@ export function ProductCard({ product, locale }: ProductCardProps) {
 
           <span className="mt-auto inline-flex items-center gap-1 pt-1 text-xs font-semibold text-[#0d6a3d]">
             View Details
-            <ArrowRight className="size-3.5 text-[#d9a72d] transition-transform duration-300 group-hover:translate-x-1" />
+            <ArrowRight className="size-3 text-[#d9a72d] transition-transform duration-300 group-hover:translate-x-1" />
           </span>
         </div>
       </article>
