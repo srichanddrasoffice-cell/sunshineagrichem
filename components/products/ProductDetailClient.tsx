@@ -96,7 +96,7 @@ export function ProductDetailClient({ product, locale, translation, dictionary, 
                 </p>
                 <a
                   href={product.brochure}
-                  download="Sunshine-Brochure.pdf"
+                  download="Sunshine-Agrichem-Brochure.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-1 inline-flex items-center rounded-full bg-[#d9a72d] px-2.5 py-1.5 text-xs font-semibold text-[#0f2f22] transition hover:bg-[#c7951f] sm:mt-2 sm:px-3 sm:py-2 sm:text-sm"

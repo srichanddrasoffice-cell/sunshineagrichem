@@ -22,7 +22,7 @@ const buildProduct = (
   slug,
   category,
   images: [image],
-  brochure: "/Sunshine%20Broucher..pdf",
+  brochure: "/Sunshine%20Agrichem%20Brochure.pdf",
   featured,
   translations: {
     en: {

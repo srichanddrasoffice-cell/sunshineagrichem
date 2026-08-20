@@ -49,7 +49,7 @@ export default function FloatingActions({
       {brochureAction && (
         <a
           href={brochureAction.href}
-          download="Sunshine-Brochure.pdf"
+          download="Sunshine-Agrichem-Brochure.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="
